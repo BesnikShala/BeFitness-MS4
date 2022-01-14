@@ -6,6 +6,7 @@
 <head>
 
     {% block meta %}
+    \
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,7 +33,54 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+        <div class="row">
+            <div class="col-12 col-lg-10 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0">
+                        BeFitness
+                    </h2>
+                </a>
+            </div>
+            <div class="btn-group col-12 col-lg-2 my-auto py-1 py-lg-0 text-lg-right" role="group"
+                aria-label="Button group with nested dropdown">
+                <div class="btn-group text-lg-right my-0" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user">Account</i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <a class="dropdown-item" href="#">Manage Products</a>
+                            {% endif %}
+                            <a class="dropdown-item" href="#">My Profile</a>
+                            <a class="dropdown-item" href="#">Log Out</a>
+                        {% else %}
+                            <a class="dropdown-item" href="#">Register</a>
+                            <a class="dropdown-item" href="#">Log In</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shopping Cart
+                        <a class="text-small my-0">
+                            {% if grand_total %}
+                                £{{ grand_total|floatformat:2 }}
+                            {% else %}
+                                £0.00
+                            {% endif %}
+                        </a>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <button type="button" class="btn btn-secondary">2</button>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </header>
 
     {% if messages %}
         <div class="message-container"></div>
