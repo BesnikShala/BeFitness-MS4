@@ -15,9 +15,14 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/ed66045c4b.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
         </script>
@@ -34,18 +39,32 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col-12 col-lg-10 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row pt-lg pt-lg-2 d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">
                         BeFitness
                     </h2>
                 </a>
             </div>
-            <div class="btn-group col-12 col-lg-2 my-auto py-1 py-lg-0 text-lg-right" role="group"
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input type="text" name="q" placeholder="Search" class="form-control">
+                        <div class="input-group-append">
+                            <button class="form-control border" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="btn-group col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-right" role="group"
                 aria-label="Button group with nested dropdown">
                 <div class="btn-group text-lg-right my-0" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user">Account</i>
                     </button>
@@ -87,6 +106,7 @@
     {% endif %}
 
     {% block page_header %}
+        
     {% endblock %}
 
     {% block content %}

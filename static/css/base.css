@@ -1,0 +1,64 @@
+html {
+    height: 100%
+}
+
+body {
+    font-family: ' Lato';
+}
+
+#topnav {
+    color: yellow;
+    background-color: #ffd026;
+    min-height: 100px;
+    }
+}
+
+.header-image-text {
+    padding-top: 150px;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: white;
+}
+
+body {
+    padding-top: 150px;
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
+    color: white;
+}
+
+.shop-button {
+    background-color: #ffd026
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* Media Queries */
+
+/* fixed top navbar only on medium to large screens */
+@media(min-width: 992px) {
+    .fixed-top-desktop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1050;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
