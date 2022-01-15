@@ -7,10 +7,18 @@ body {
 }
 
 #topnav {
-    color: yellow;
-    background-color: #ffd026;
+    color: #f9d100;
+    background-color: #f9d100;
     min-height: 100px;
     }
+}
+
+.bg-black {
+    background-color: black;
+}
+
+#main-nav {
+    background-color: black;
 }
 
 .header-image-text {
@@ -31,6 +39,10 @@ body {
 
 .shop-button {
     background-color: #ffd026
+}
+
+.account-cart {
+    justify-content: end;
 }
 
 /* from Bulma */
