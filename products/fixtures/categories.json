@@ -10,7 +10,7 @@
         "pk": 2,
         "model": "products.category",
         "fields": {
-            "name": "gym equipment",
+            "name": "gym_equipment",
             "friendly_name": "Gym Equipment"
         }
     },
@@ -18,7 +18,7 @@
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "supplements & vitamins",
+            "name": "supplements_vitamins",
             "friendly_name": "Gym Equipment & Vitamins"
         }
     },
@@ -26,32 +26,48 @@
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "gym equipment",
-            "friendly_name": "Gym Equipment"
+            "name": "diet_plans",
+            "friendly_name": "Diet Plans"
         }
     },
     {
         "pk": 5,
         "model": "products.category",
         "fields": {
-            "name": "diet plans",
-            "friendly_name": "Diet Plans"
+            "name": "vitamin_plans",
+            "friendly_name": "Vitamin Plans"
         }
     },
     {
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "vitamin plans",
-            "friendly_name": "Vitamin Plans"
+            "name": "supplement_plan",
+            "friendly_name": "Supplement Plan"
         }
     },
     {
         "pk": 7,
         "model": "products.category",
         "fields": {
-            "name": "exercise plan",
-            "friendly_name": "Exercise Plan"
+            "name": "weight_management_plan",
+            "friendly_name": "Weight Management Plan"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "strength_conditioning_plan",
+            "friendly_name": "Strength and Conditioning Plan"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "calisthenics_plan",
+            "friendly_name": "Calisthenics Plan"
         }
     }
 
