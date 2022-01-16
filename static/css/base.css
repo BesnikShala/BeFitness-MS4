@@ -34,7 +34,6 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Lato';
-    color: white;
 }
 
 .shop-button {
@@ -43,6 +42,16 @@ body {
 
 .account-cart {
     justify-content: end;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0%;
+    position: fixed;
+    background-color: white;
+    z-index: -1;
 }
 
 /* from Bulma */
