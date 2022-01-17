@@ -40,6 +40,12 @@ body {
     background-color: #ffd026
 }
 
+/* category buttons */
+
+.list-style {
+    list-style-type: none;
+}
+
 .account-cart {
     justify-content: end;
 }
@@ -52,6 +58,11 @@ body {
     position: fixed;
     background-color: white;
     z-index: -1;
+}
+
+a.side-badge > span.badge:hover {
+    background: #f9d100;
+    color: black;
 }
 
 /* from Bulma */

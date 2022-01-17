@@ -19,7 +19,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="col-2 d-none d-md-block d-lg-block">
+                <ul class="list-style">
+                    {% for c in current_categories %}
+                    <li class="list-style">
+                        <a href="{% url 'products' %}?category={{ c.name }}"
+                            class="text-decoration-none side-badge">
+                        <span class="p-2 mt-2 badge badge-dark rounded-0 border">{{ c.friendly_name }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="product-container col-10 ">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     <!-- for loop to iterate through products/generate column card -->
@@ -46,6 +58,14 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                            {% if product.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                                                        <i class="fas fa-tags mr-1"></i>{{ product.category.friendly_name }}
+                                                    </a>
+
+                                                </p>
+                                            {% endif %}
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1">{{ product.rating }} / 5</i></small>
                                             {% else %}

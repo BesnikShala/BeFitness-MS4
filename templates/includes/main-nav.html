@@ -30,7 +30,8 @@
                 Fitness Products
             </a>
             <div class="dropdown-menu" aria-labelledby="product-link">
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=clothing,gym_equipment,supplements_vitamins"
+                    class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?category=clothing" class="dropdown-item">Clothing</a>
                 <a href="{% url 'products' %}?category=gym_equipment" class="dropdown-item">Gym Equipment</a>
                 <a href="{% url 'products' %}?category=supplements_vitamins" class="dropdown-item">Supplements &amp; Vitmamins</a>
