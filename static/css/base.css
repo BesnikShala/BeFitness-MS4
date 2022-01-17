@@ -44,6 +44,15 @@ body {
 
 .list-style {
     list-style-type: none;
+    padding-left: 0;
+}
+
+.accordion-style {
+    font-size: 20px;
+}
+
+.side-buttons {
+    background: lightblue;
 }
 
 .account-cart {
