@@ -19,14 +19,17 @@
         </div>
     </div>
     <div class="row">
-
+        <div class="col-12 col-md-6">
+            <p class="text-muted mt-3 text-center text-md-left pl-5">
+                Displaying {{ products|length }} Products {% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+                {% if search_term %}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-2 d-none d-md-block d-sm-none side-buttons mt-5">
-            <div class="col-12 col-md-6">
-                <p class="text-muted mt-3 text-center text-md-left">
-                    {% if search_term %}
-                    {% endif %}
-                </p>
-            </div>
             <!-- current category buttons and links -->
             <h3 class="side-heading">Current Category</h3>
             <ul class="list-style">
