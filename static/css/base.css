@@ -74,6 +74,11 @@ a.side-badge > span.badge:hover {
     color: black;
 }
 
+h2.side-badge > button:hover {
+    background: #f9d100;
+    color: black;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;

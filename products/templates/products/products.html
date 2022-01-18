@@ -2,151 +2,179 @@
 {% load static %}
 
 {% block page_block %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2>Products</h2>
-                <hr class="w-50 mb-1">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2>Products</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 d-none d-md-block d-sm-none side-buttons">
+            <h3>Current Category</h3>
+            <ul class="list-style">
+                {% for c in current_categories %}
+                <li class="list-style">
+                    <a href="{% url 'products' %}?category={{ c.name }}" class="text-decoration-none side-badge">
+                        <span class="p-2 mt-2 badge badge-dark rounded-0 border w-100">{{ c.friendly_name }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <h3>Sort</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingOne">
+                        <button class="badge btn-dark w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            By Price
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a
+                                        href=" {% url 'products' %}?sort=price&direction=asc">Price (low to
+                                        high</a></button>
+                                <button class="btn w-100" type="button"><a
+                                        href=" {% url 'products' %}?sort=price&direction=desc">Price (high to
+                                        low)</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingTwo">
+                        <button class="badge collapsed btn-dark w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            By Rating
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a
+                                        href="{% url 'products' %}?sort=rating&direction=asc">Rating
+                                        (low to
+                                        high</a></button>
+                                <button class="btn w-100" type="button"><a
+                                        href=" {% url 'products' %}?sort=rating&direction=desc">Rating
+                                        (high to
+                                        low)</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingThree">
+                        <button class="badge collapsed btn-dark w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            By Name
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a
+                                        href="{% url 'products' %}?sort=name&direction=desc">Name 
+                                        (A-Z)
+                                    </a></button>
+                                <button class="btn w-100" type="button"><a
+                                        href="{% url 'products' %}?sort=name&direction=asc">Name 
+                                        (Z-A)
+                                    </a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingFour">
+                        <button class="badge collapsed btn-dark w-100" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            By Category
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a
+                                        href="{% url 'products' %}?sort=category&direction=asc">Category
+                                        (A-Z)</a></button>
+                                <button class="btn w-100" type="button"><a
+                                        href="{% url 'products' %}?sort=category&direction=desc">Category
+                                        (Z-A)</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2 d-none d-md-block d-sm-none side-buttons">
-                <h3>Current Category</h3>
-                <ul class="list-style">
-                    {% for c in current_categories %}
-                    <li class="list-style">
-                        <a href="{% url 'products' %}?category={{ c.name }}"
-                            class="text-decoration-none side-badge">
-                        <span class="p-2 mt-2 badge badge-dark rounded-0 border">{{ c.friendly_name }}</span>
+        <div class="product-container col-10 ">
+            <div class="row">
+                <!-- for loop to iterate through products/generate column card -->
+                {% for product in products %}
+                <div class="col-sm-5 col-md-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        <!-- loop through products to render card image -->
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                         </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <h3>Sort</h3>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                            <button class="accordion-style" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                aria-controls="panelsStayOpen-collapseOne">
-                                Sort by Price
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                            aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                
-                                <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
+                        {% else %}
+                        <!-- default image if no image exists -->
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"
+                                class="card-img-top img-fluid">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                            <button class="accordion-style collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseTwo">
-                                Sort by Rating
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingTwo">
-                            <div class="accordion-body">
-                                
-                                <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                            <button class="accordion-style collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseThree">
-                                Sort by Name
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingThree">
-                            <div class="accordion-body">
-                                
-                                <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                            <button class=" accordion-style collapsed" type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseThree">
-                                Sort by Category
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingFour">
-                            <div class="accordion-body">
-                                
-                                <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a href="{% url 'products' %}?category={{ product.category.name }}"
+                                            class="text-muted">
+                                            <i class="fas fa-tags mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1">{{ product.rating }} /
+                                            5</i></small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="product-container col-10 ">
-                <div class="row">
-                    <!-- for loop to iterate through products/generate column card -->
-                    {% for product in products %}
-                        <div class="col-sm-5 col-md-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <!-- loop through products to render card image -->
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" 
-                                    class="card-img-top img-fluid">
-                                </a>
-                                {% else %}
-                                <!-- default image if no image exists -->
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"
-                                        class="card-img-top img-fluid">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                            {% if product.category %}
-                                                <p class="small mt-1 mb-0">
-                                                    <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
-                                                        <i class="fas fa-tags mr-1"></i>{{ product.category.friendly_name }}
-                                                    </a>
-                                                </p>
-                                            {% endif %}
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1">{{ product.rating }} / 5</i></small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                    {% endfor %}
-                </div>
+
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
