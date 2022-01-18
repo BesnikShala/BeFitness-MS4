@@ -1,74 +1,73 @@
 [{
-        "pk": 1,
         "model": "products.category",
+        "pk": 1,
         "fields": {
             "name": "clothing",
             "friendly_name": "Clothing"
         }
     },
     {
-        "pk": 2,
         "model": "products.category",
+        "pk": 2,
         "fields": {
             "name": "gym_equipment",
             "friendly_name": "Gym Equipment"
         }
     },
     {
-        "pk": 3,
         "model": "products.category",
+        "pk": 3,
         "fields": {
             "name": "supplements_vitamins",
-            "friendly_name": "Gym Equipment & Vitamins"
+            "friendly_name": "Supplementst & Vitamins"
         }
     },
     {
+        "model": "products.category",
         "pk": 4,
-        "model": "products.category",
         "fields": {
-            "name": "diet_plans",
-            "friendly_name": "Diet Plans"
+            "name": "diet_plan",
+            "friendly_name": "Diet Plan"
         }
     },
     {
+        "model": "products.category",
         "pk": 5,
-        "model": "products.category",
         "fields": {
-            "name": "vitamin_plans",
-            "friendly_name": "Vitamin Plans"
+            "name": "vitamin_plan",
+            "friendly_name": "Vitamin Plan"
         }
     },
     {
-        "pk": 6,
         "model": "products.category",
+        "pk": 6,
         "fields": {
             "name": "supplement_plan",
             "friendly_name": "Supplement Plan"
         }
     },
     {
-        "pk": 7,
         "model": "products.category",
+        "pk": 7,
         "fields": {
             "name": "weight_management_plan",
             "friendly_name": "Weight Management Plan"
         }
     },
     {
-        "pk": 8,
         "model": "products.category",
+        "pk": 8,
         "fields": {
             "name": "strength_conditioning_plan",
             "friendly_name": "Strength and Conditioning Plan"
         }
     },
     {
-        "pk": 9,
         "model": "products.category",
+        "pk": 9,
         "fields": {
             "name": "calisthenics_plan",
             "friendly_name": "Calisthenics Plan"
         }
     }
-
 ]
