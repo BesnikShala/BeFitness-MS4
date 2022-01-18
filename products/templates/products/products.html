@@ -19,8 +19,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-2 d-none d-md-block d-sm-none side-buttons">
-            <h3>Current Category</h3>
+        <div class="col-2 d-none d-md-block d-sm-none side-buttons mt-5">
+            <h3 class="side-heading">Current Category</h3>
             <ul class="list-style">
                 {% for c in current_categories %}
                 <li class="list-style">
@@ -31,7 +31,7 @@
                 {% endfor %}
             </ul>
             <div class="accordion" id="accordionPanelsStayOpenExample">
-                <h3>Sort</h3>
+                <h3 class="side-heading">Sort</h3>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingOne">
                         <button class="badge btn-dark w-100" type="button" data-bs-toggle="collapse"
@@ -45,10 +45,12 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
-                                        href=" {% url 'products' %}?sort=price&direction=asc">Price (low to
+                                        class="sort-text" href=" {% url 'products' %}?sort=price&direction=asc">Price
+                                        (low to
                                         high</a></button>
                                 <button class="btn w-100" type="button"><a
-                                        href=" {% url 'products' %}?sort=price&direction=desc">Price (high to
+                                        class="sort-text" href=" {% url 'products' %}?sort=price&direction=desc">Price
+                                        (high to
                                         low)</a></button>
                             </div>
                         </div>
@@ -67,11 +69,11 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
-                                        href="{% url 'products' %}?sort=rating&direction=asc">Rating
+                                        class="sort-text" href="{% url 'products' %}?sort=rating&direction=asc">Rating
                                         (low to
                                         high</a></button>
                                 <button class="btn w-100" type="button"><a
-                                        href=" {% url 'products' %}?sort=rating&direction=desc">Rating
+                                        class="sort-text" href=" {% url 'products' %}?sort=rating&direction=desc">Rating
                                         (high to
                                         low)</a></button>
                             </div>
@@ -91,11 +93,11 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
-                                        href="{% url 'products' %}?sort=name&direction=desc">Name 
+                                        class="sort-text" href="{% url 'products' %}?sort=name&direction=desc">Name
                                         (A-Z)
                                     </a></button>
                                 <button class="btn w-100" type="button"><a
-                                        href="{% url 'products' %}?sort=name&direction=asc">Name 
+                                        class="sort-text" href="{% url 'products' %}?sort=name&direction=asc">Name
                                         (Z-A)
                                     </a></button>
                             </div>
@@ -116,10 +118,10 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
-                                        href="{% url 'products' %}?sort=category&direction=asc">Category
+                                        class="sort-text" href="{% url 'products' %}?sort=category&direction=asc">Category
                                         (A-Z)</a></button>
                                 <button class="btn w-100" type="button"><a
-                                        href="{% url 'products' %}?sort=category&direction=desc">Category
+                                        class="sort-text" href="{% url 'products' %}?sort=category&direction=desc">Category
                                         (Z-A)</a></button>
                             </div>
                         </div>
@@ -127,7 +129,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-container col-10 ">
+        <div class="product-container col-10 mt-5">
             <div class="row">
                 <!-- for loop to iterate through products/generate column card -->
                 {% for product in products %}
