@@ -86,21 +86,20 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-cart-arrow-down"> Cart</i>
-                        <a class="text-small my-0">
-                            {% if grand_total %}
+                <div class="">
+                    <a class="text-small my-0" href="{% url 'view_bag' %}">
+                        <div class="text-center">
+                            <i class="fas fa-cart-arrow-down"> Cart</i>
+                            <p class="my-0">
+                                {% if grand_total %}
                                 £{{ grand_total|floatformat:2 }}
-                            {% else %}
+                                {% else %}
                                 £0.00
-                            {% endif %}
-                        </a>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <button type="button" class="btn btn-secondary"></button>
-                    </div>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </div>
                 </div>
             </div>
         </div>
