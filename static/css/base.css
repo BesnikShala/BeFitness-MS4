@@ -102,6 +102,25 @@ span.badge {
     font-size: 15px;
 }
 
+/* Toasts */
+
+/* .toast-header {
+    background-color: #f9d100;
+    z-index: 9999;
+
+} */
+
+.my-toast {
+    overflow: visible;
+}
+
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 9999999999999;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
