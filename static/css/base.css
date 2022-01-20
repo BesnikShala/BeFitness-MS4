@@ -3,8 +3,14 @@ html {
 }
 
 body {
-    font-family: ' Lato';
+    padding-top: 150px;
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
 }
+
+/* Navigation/navbar */
 
 #topnav {
     color: #f9d100;
@@ -28,14 +34,6 @@ body {
     color: white;
 }
 
-body {
-    padding-top: 150px;
-    background: url('/media/homepage.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    font-family: 'Lato';
-}
-
 .shop-button {
     background-color: #ffd026
 }
@@ -53,7 +51,6 @@ body {
 
 .side-buttons {
     background: #f1f1f1;
-    border
 }
 
 .account-cart {
@@ -116,6 +113,11 @@ span.badge {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.update-link,
+.remove-link {
+    cursor: pointer;
 }
 
 /* Media Queries */
