@@ -70,7 +70,6 @@ def checkout(request):
             messages.error(request, "There is nothing in your cart at the moment")
             return redirect(reverse('products'))
 
-
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
@@ -90,7 +89,7 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': 'intent.client_secret'
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
