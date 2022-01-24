@@ -1,0 +1,33 @@
+[{
+        "model": "plans.plan_category",
+        "pk": 1,
+        "fields": {
+            "name": "supplement_plan",
+            "friendly_name": "Supplement Plan"
+        }
+    },
+    {
+        "model": "plans.plan_category",
+        "pk": 2,
+        "fields": {
+            "name": "weight_management_plan",
+            "friendly_name": "Weight Management Plan"
+        }
+    },
+    {
+        "model": "plans.plan_category",
+        "pk": 3,
+        "fields": {
+            "name": "strength_conditioning_plan",
+            "friendly_name": "Strength and Conditioning Plan"
+        }
+    },
+    {
+        "model": "plans.plan_category",
+        "pk": 4,
+        "fields": {
+            "name": "calisthenics_plan",
+            "friendly_name": "Calisthenics Plan"
+        }
+    }
+]
