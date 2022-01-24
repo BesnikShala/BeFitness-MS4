@@ -89,11 +89,49 @@ Click to view all Wireframes in folder [here!](https://github.com/BesnikShala/Be
 ![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/profile-wireframe.jpeg)
 ![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/plan-wireframe.jpeg)
 
-
+### Database Schema
 
 ## Features
 
+* View Products
+
+Users are able to view products within categories. They have the option to expand the product to view product details. At this point they can view product information and have more options to add to bag or return to view other products.
+
+* Sorting Products
+
+Users can sort products to display and sort by price, category, rating or name. They can view from high to low or low to high. This provides a niche section to make it easier for users to find what they are looking for. 
+
+* Search Products
+
+Users are able to search products by key words from the navbar. A responsive search input can sort and find all products that match a key word. This gives the user easy access to find exactly what they are looking for or to sort more specifically by keywords. 
+
+* Checkout / Purchase
+
+Users are able to complete a payment via stripe. They will need to create an account if they want to save order details to their profile or to save products to their cart. 
+
+* Select Size
+
+Users can choose sizes and quantity on products which have sizes. They can also alter the quantity within the checkout cart before payment. 
+
 ## Features Left to Implement
+
+* Create a Profile / Register
+
+Users are able to create a profile and upload a profile image. They are able to save order information and billing/delivery details. 
+
+* Share Progress / Post Status
+
+Users will be able to share their progress or experience with other befitness account holders. They are able to post a status, with full CRUD functionality to edit or delete their posts. 
+
+* Add / Edit / Delete Products
+
+The admin will be able to add new products, amend any product or even delete anything from the site including other posts.
+
+* Plans 
+
+Users can view and purchase different plans to suit their fitness needs. The users will be able to view plan details and add to cart to pruchase. 
+
+
 
 ## Technologies
 
