@@ -41,13 +41,14 @@
                 </li>
                 {% endfor %}
             </ul>
+
             <!-- Accordian for sorting through products -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <h3 class="side-heading">Sort</h3>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingOne">
-                        <button class="badge btn-dark w-100" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        <button class="badge btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                             aria-controls="panelsStayOpen-collapseOne">
                             By Price
                         </button>
@@ -70,14 +71,12 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingTwo">
-                        <button class="badge collapsed btn-dark w-100" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
+                        <button button class="badge collapsed btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#collapseExample1">
                             By Rating
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="collapse" id="collapseExample1">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
@@ -94,14 +93,12 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingThree">
-                        <button class="badge collapsed btn-dark w-100" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
+                        <button class="badge collapsed btn-dark w-100"
+                            type="button" data-toggle="collapse" data-target="#collapseExample2">
                             By Name
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="collapse" id="collapseExample2">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
@@ -118,15 +115,12 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingFour">
-                        <button class="badge collapsed btn-dark w-100" type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
+                        <button button class="badge collapsed btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#collapseExample3">
                             By Category
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="collapse" id="collapseExample3">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a
@@ -185,6 +179,7 @@
                         </div>
                     </div>
                 </div>
+                
 
                 {% endfor %}
             </div>
