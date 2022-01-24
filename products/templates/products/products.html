@@ -150,7 +150,7 @@
                         <!-- loop through products to render card image -->
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                            <img src="{{ product.image.url|lower }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                         </a>
                         {% else %}
                         <!-- default image if no image exists -->
