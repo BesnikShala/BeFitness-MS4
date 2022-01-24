@@ -4,5 +4,25 @@ from. models import Plan, Plan_Category
 
 # Register your models here.
 
-admin.site.register(Plan)
-admin.site.register(Plan_Category)
+class PlanAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'plan_category',
+        'plan_length',
+        'days_per_week',
+        'equipment_needed',
+        'price',
+        'image',
+    )
+
+    ordering = ('name',)
+
+class Plan_CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'friendly_name',
+    )
+
+
+admin.site.register(Plan, PlanAdmin)
+admin.site.register(Plan_Category, Plan_CategoryAdmin)
