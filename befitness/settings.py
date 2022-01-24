@@ -13,6 +13,9 @@ import os
 from pathlib import Path
 import dj_database_url
 
+if os.path.exists('env.py'):
+    import env  # noqa
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,13 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-# SECRET_KEY = '#47tul_u(do3gmuo(115x308l!&10lzd+_+g27w*y_9b9x@1eh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-# DEBUG = True
 
 ALLOWED_HOSTS = ['befitness-ms4.herokuapp.com', 'localhost']
 
