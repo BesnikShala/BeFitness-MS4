@@ -80,7 +80,7 @@
                         {% if request.user.is_superuser %}
                         <a class="dropdown-item" href="#">Manage Products</a>
                         {% endif %}
-                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
                         <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
                         {% else %}
                         <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
@@ -128,7 +128,7 @@
                     {% elif level == 25 %}
                         {% include 'includes/toasts/toast_success.html' %}
                     {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
+                        {% include 'includes/toasts/toast_alert.html' %}
                     {% endif %}
                 {% endwith %}
             {% endfor %}
