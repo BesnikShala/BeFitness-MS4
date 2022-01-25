@@ -1,18 +1,16 @@
-[
-    {
-        "model": "plans.plan",
-        "pk": 100,
-        "fields": {
-            "plan_category": 4,
-            "name": "Pull Up Workout",
-            "plan_length": "5",
-            "difficulty":"7",
-            "days_per_week": "5",
-            "description": "If you’re trying to strengthen your upper body muscles, especially the back, biceps, and core, then you can try calisthenics pull exercises. The calisthenics pull workout increases strength, balance, flexibility, and improves upper body posture.",
-            "equipment_needed": "Pull-up Bar",
-            "price": "29.99",
-            "rating": "4.60",
-            "image": ""
-        }
+[{
+    "model": "plans.plan",
+    "pk": 100,
+    "fields": {
+        "plan_category": 4,
+        "name": "Pull Up Workout",
+        "plan_length": "5",
+        "difficulty": "7",
+        "days_per_week": "5",
+        "description": "If you’re trying to strengthen your upper body muscles, especially the back, biceps, and core, then you can try calisthenics pull exercises. The calisthenics pull workout increases strength, balance, flexibility, and improves upper body posture.",
+        "equipment_needed": "Pull-up Bar",
+        "price": "29.99",
+        "rating": "4.60",
+        "image": ""
     }
-]
+}]

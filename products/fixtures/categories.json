@@ -13,5 +13,13 @@
             "name": "gym_equipment",
             "friendly_name": "Gym Equipment"
         }
+    },
+    {
+        "model": "products.category",
+        "pk": 2,
+        "fields": {
+            "name": "gym_equipment",
+            "friendly_name": "Gym Equipment"
+        }
     }
 ]
