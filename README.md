@@ -113,19 +113,20 @@ Users are able to complete a payment via stripe. They will need to create an acc
 
 Users can choose sizes and quantity on products which have sizes. They can also alter the quantity within the checkout cart before payment. 
 
-## Features Left to Implement
-
 * Create a Profile / Register
 
 Users are able to create a profile and upload a profile image. They are able to save order information and billing/delivery details. 
+
+* Add / Edit / Delete Products
+
+The admin will be able to add new products, amend any product or even delete anything from the site including other posts.
+
+## Features Left to Implement
 
 * Share Progress / Post Status
 
 Users will be able to share their progress or experience with other befitness account holders. They are able to post a status, with full CRUD functionality to edit or delete their posts. 
 
-* Add / Edit / Delete Products
-
-The admin will be able to add new products, amend any product or even delete anything from the site including other posts.
 
 * Plans 
 
