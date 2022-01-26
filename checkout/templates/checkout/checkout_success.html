@@ -79,6 +79,21 @@
             </div>
         </div>
     </div>
+    {% if from_profile %}
+        <a href="{% url 'profile' %}" class="btn btn-dark">
+            <span>
+                <i class="fas fa-angle-left"></i>
+            </span>
+            <span>Back to profile</span>
+        </a>
+    {% else %}
+        <a href="{% url 'products' %}" class="btn btn-dark">
+            <span>
+                <i class="fas fa-gifts"></i>
+            </span>
+            <span>Checkout more products</span>
+        </a>
+    {% endif %}
 
 </div>
 
