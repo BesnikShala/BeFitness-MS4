@@ -13,7 +13,7 @@
             </div>
             <hr>
         </div>
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <p>Your Cart ({{ product_count }})</p>
             <hr>
             <div class="cart-items bag-notification">
