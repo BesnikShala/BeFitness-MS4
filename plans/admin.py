@@ -1,11 +1,14 @@
 
 from django.contrib import admin
 
-from. models import Plan, Plan_Category
+from .models import Plan, Plan_Category
 
 # Register your models here.
 
 class PlanAdmin(admin.ModelAdmin):
+
+    model = Plan
+
     list_display = (
         'name',
         'plan_category',
@@ -19,6 +22,8 @@ class PlanAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 class Plan_CategoryAdmin(admin.ModelAdmin):
+    model = Plan_Category
+
     list_display = (
         'name',
         'friendly_name',
