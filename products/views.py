@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Plan
+from .models import Product, Category
 from .forms import ProductForm
 
 # Create your views here.
@@ -12,7 +12,6 @@ def all_products(request):
     """ A View to show all clothing products, sorting and search options """
 
     products = Product.objects.all()
-    plans = Plan.objects.all()
     query = None
     categories = None
     sort = None
