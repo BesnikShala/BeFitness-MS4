@@ -5,7 +5,7 @@
         "plan_category": 4,
         "name": "Pull Up Workout",
         "plan_length": "5",
-        "difficulty": "7",
+        "difficulty": "7.2",
         "days_per_week": "5",
         "description": "If you’re trying to strengthen your upper body muscles, especially the back, biceps, and core, then you can try calisthenics pull exercises. The calisthenics pull workout increases strength, balance, flexibility, and improves upper body posture.",
         "equipment_needed": "Pull-up Bar",
@@ -13,4 +13,37 @@
         "rating": "4.60",
         "image": ""
     }
-}]
+    },
+    {
+        "model": "plans.plan",
+        "pk": 101,
+        "fields": {
+            "plan_category": 4,
+            "name": "Push Up Workout",
+            "plan_length": "5",
+            "difficulty": "6.5",
+            "days_per_week": "5",
+            "description": "This workout plan targets your pecks, arms and core to give you the ultimate strength that you need to be able to do pushups like a Marine. The Workout will grow muscle whilst defining it and burning fatcells. As you will not be lifting more than your bodyweight you can do more repetitions and gain that cut physique. The Plan consists of 5 days of exercise which are designed to target different sections of the chest, arms and the core. You will receive in depth videos and guides which will give you a new plan each week. This is constantly evolving s there are many calisthenics exercises you can do almost anywhere.",
+            "equipment_needed": "Yoga Mat (optional)",
+            "price": "25.99",
+            "rating": "4.80",
+            "image": ""
+        }
+    },
+    {
+        "model": "plans.plan",
+        "pk": 102,
+        "fields": {
+            "plan_category": 4,
+            "name": "Push Up Workout",
+            "plan_length": "5",
+            "difficulty": "6.5",
+            "days_per_week": "5",
+            "description": "This workout plan targets your pecks, arms and core to give you the ultimate strength that you need to be able to do pushups like a Marine. The Workout will grow muscle whilst defining it and burning fatcells. As you will not be lifting more than your bodyweight you can do more repetitions and gain that cut physique. The Plan consists of 5 days of exercise which are designed to target different sections of the chest, arms and the core. You will receive in depth videos and guides which will give you a new plan each week. This is constantly evolving s there are many calisthenics exercises you can do almost anywhere.",
+            "equipment_needed": "Yoga Mat (optional)",
+            "price": "25.99",
+            "rating": "4.80",
+            "image": ""
+        }
+
+]

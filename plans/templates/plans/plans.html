@@ -1,1 +1,155 @@
-<div>hello</div>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2>Products</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p class="text-muted mt-3 text-center text-md-left pl-5">
+                Displaying {{ products|length }} Products {% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+                {% if search_term %}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 d-none d-md-block d-sm-none side-buttons mt-5">
+            <!-- current category buttons and links -->
+            <h3 class="side-heading">Current Category</h3>
+            <ul class="list-style">
+                {% for c in current_categories %}
+                <li class="list-style">
+                    <a href="{% url 'products' %}?category={{ c.name }}" class="text-decoration-none side-badge">
+                        <span class="p-2 mt-2 badge badge-dark rounded-0 border w-100">{{ c.friendly_name }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Accordian for sorting through products -->
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <h3 class="side-heading">Sort</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingOne">
+                        <button class="badge btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            By Price
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href=" {% url 'products' %}?sort=price&direction=asc">Price
+                                        (low to
+                                        high</a></button>
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href=" {% url 'products' %}?sort=price&direction=desc">Price
+                                        (high to
+                                        low)</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingTwo">
+                        <button button class="badge collapsed btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#collapseExample1">
+                            By Rating
+                        </button>
+                    </h2>
+                    <div class="collapse" id="collapseExample1">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href="{% url 'products' %}?sort=rating&direction=asc">Rating
+                                        (low to
+                                        high</a></button>
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href=" {% url 'products' %}?sort=rating&direction=desc">Rating
+                                        (high to
+                                        low)</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingThree">
+                        <button class="badge collapsed btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#collapseExample2">
+                            By Name
+                        </button>
+                    </h2>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href="{% url 'products' %}?sort=name&direction=desc">Name
+                                        (A-Z)
+                                    </a></button>
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href="{% url 'products' %}?sort=name&direction=asc">Name
+                                        (Z-A)
+                                    </a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header side-badge" id="panelsStayOpen-headingFour">
+                        <button button class="badge collapsed btn-dark w-100" type="button" data-toggle="collapse"
+                            data-target="#collapseExample3">
+                            By Category
+                        </button>
+                    </h2>
+                    <div class="collapse" id="collapseExample3">
+                        <div class="accordion-body bg-white">
+                            <div class="d-grid gap-2">
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href="{% url 'products' %}?sort=category&direction=asc">Category
+                                        (A-Z)</a></button>
+                                <button class="btn w-100" type="button"><a class="sort-text"
+                                        href="{% url 'products' %}?sort=category&direction=desc">Category
+                                        (Z-A)</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-container col-10 mt-5">
+            <div class="row">
+                <!-- for loop to iterate through products/generate column card -->
+                {% for plan in plans %}
+                 <div class="col-sm-5 col-md-4 col-xl-3">
+                    <div class="card h-100 border-0">
+
+                        {{ plans }}
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
