@@ -1,5 +1,5 @@
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Plan
 
@@ -15,3 +15,15 @@ def view_plans(request):
     }
 
     return render(request, 'plans/plans.html', context)
+
+
+def plan_detail(request, plan_id):
+    """ A View to show plan details """
+
+    plan = get_object_or_404(Plan, pk=plan_id)
+
+    context = {
+        'plan': plan,
+    }
+
+    return render(request, 'plans/plan_detail.html', context)
