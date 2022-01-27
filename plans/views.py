@@ -1,7 +1,7 @@
-
-from django.shortcuts import render, get_object_or_404
-
-from .models import Plan
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
+from .models import Plan, Plan_Category
 
 # Create your views here.
 
@@ -9,6 +9,12 @@ def view_plans(request):
     """ Show all Plans and sort/search queries """
 
     plans = Plan.objects.all()
+    plan_categories = None
+
+    if request.GET:
+        if 'plan_category' in request.GET:
+            plan_categories = request.GET['plan_category'].split(',')
+            plans = plans.filter(plan_category__name__in=plan_categories)
 
     context = {
         'plans': plans,

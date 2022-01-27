@@ -156,33 +156,33 @@
                         {% endif %}
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ plan.name }}</p>
-                        </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ plan.price }}</p>
-                                    {% if plan.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a href="{% url 'plans' %}?category={{ plan.category.name }}"
-                                            class="text-muted">
-                                            <i class="fas fa-tags mr-1"></i>{{ plan.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% if plan.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1">{{ plan.rating }} /
-                                            5</i></small>
-                                    {% else %}
-                                    <small class="text-muted">No Rating</small>
-                                    {% endif %}
-                                    {% if request.user.is_superuser %}
-                                    <small class="ml-3">
-                                        <a href="" class="text-success">Edit</a> |
-                                    </small>
-                                    <small class="ml-3">
-                                        <a href=" " class="text-danger">Delete</a>
-                                    </small>
-                                    {% endif %}
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold">£{{ plan.price }}</p>
+                                        {% if plan.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a href="{% url 'plans' %}?category={{ plan.category.name }}"
+                                                class="text-muted">
+                                                <i class="fas fa-tags mr-1"></i>{{ plan.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        {% if plan.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1">{{ plan.rating }} /
+                                                5</i></small>
+                                        {% else %}
+                                        <small class="text-muted">No Rating</small>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="" class="text-success">Edit</a> |
+                                        </small>
+                                        <small class="ml-3">
+                                            <a href=" " class="text-danger">Delete</a>
+                                        </small>
+                                        {% endif %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
