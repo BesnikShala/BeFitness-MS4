@@ -15,9 +15,11 @@ def view_plans(request):
         if 'plan_category' in request.GET:
             plan_categories = request.GET['plan_category'].split(',')
             plans = plans.filter(plan_category__name__in=plan_categories)
+            plan_categories = Plan_Category.objects.filter(name__in=plan_categories)
 
     context = {
         'plans': plans,
+        'current_categories': plan_categories
     }
 
     return render(request, 'plans/plans.html', context)
@@ -29,7 +31,7 @@ def plan_detail(request, plan_id):
     plan = get_object_or_404(Plan, pk=plan_id)
 
     context = {
-        'plan': plan,
+        'plan': plan, 
     }
 
     return render(request, 'plans/plan_detail.html', context)
