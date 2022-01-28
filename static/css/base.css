@@ -147,7 +147,7 @@ span.badge {
 }
 
 /* Plan Detail */
-ul.detail-list {
+.detail-list {
     list-style-type: none;
     padding: 0%;
     margin: 0%;
