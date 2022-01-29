@@ -33,7 +33,8 @@
     <div class="dropdown-menu" aria-labelledby="nav-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
-            <a class="dropdown-item" href="{% url 'add_product' %}">Manage Products</a>
+            <a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a>
+            <a class="dropdown-item" href="{% url 'add_plan' %}">Add Plan</a>
         {% endif %}
             <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
             <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>

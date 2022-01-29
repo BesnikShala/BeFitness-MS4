@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container ">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="mb-4">Are you sure you want to delete {{ plan.name }} ?</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="" class="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="text-right">
+                    <input class="btn btn-danger rounded-0" value="Delete" type="submit"></input>
+                    <a href="{% url 'plans' %}" class="btn btn-dark rounded-0">Cancel</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}

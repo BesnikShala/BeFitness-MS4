@@ -90,3 +90,24 @@ def edit_plan(request, plan_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_plan(request, plan_id):
+    """ Delete a plan with validation """
+    if not request.user.is_superuser:
+        messages.error(request, 'sorry, only admin has access to this')
+        return redirect(reverse('home'))
+
+    plan = get_object_or_404(Plan, pk=plan_id)
+    if request.method == 'POST':
+        plan.delete()
+        messages.success(request, 'Successfully deleted plan')
+        return redirect('plans')
+
+    template = 'plans/delete_plan_form.html'
+    context = {
+        'plan': plan,
+    }
+
+    return render(request, template, context)

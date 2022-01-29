@@ -136,6 +136,7 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         product.delete()
+        messages.success(request, 'Successfully deleted product')
         return redirect('products')
 
     template = 'products/delete_product_form.html'
