@@ -10,6 +10,7 @@ class PlanAdmin(admin.ModelAdmin):
     model = Plan
 
     list_display = (
+        'id',
         'name',
         'plan_category',
         'plan_length',

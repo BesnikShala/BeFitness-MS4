@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 
 from products.models import Product
+from plans.models import Plan
 
 # Create your views here.
 
@@ -14,35 +15,35 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add products and quantity to the bag """
 
-    product = get_object_or_404(Product, pk=item_id)
+    
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    print(redirect_url)   
+    item_type = redirect_url.split("/")[1]
     size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
-    bag = request.session.get('bag', {})
+    bag = request.session.get('bag', {"products": {}, "plans": {}})
 
-    if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"]}')
-            else:
-                bag[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
+    if item_type == "products":
+        product = get_object_or_404(Product, pk=item_id)
+        if item_id in list(bag['products'].keys()):
+            bag['products'][item_id] += quantity
+            messages.success(request, f'Updated {product.name} quantity to {bag["products"][item_id]}')
         else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
-    else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
-        else:
-            bag[item_id] = quantity
+            bag['products'][item_id] = quantity
             messages.success(request, f'Added {product.name} to your bag')
+    elif item_type == "plans":
+        plan = get_object_or_404(Plan, pk=item_id)
+        if item_id in list(bag['plans'].keys()):
+            bag['plans'][item_id] += quantity
+            messages.success(request, f'Added {plan.name} to your bag')
+        else:
+            bag['plans'][item_id] = quantity
+            messages.success(request, f'Added {plan.name} to your bag')
 
     request.session['bag'] = bag
+    print(request.session['bag'])
     return redirect(redirect_url)
+    print(redirect_url)
 
 
 def adjust_bag(request, item_id):
