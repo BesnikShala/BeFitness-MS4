@@ -17,18 +17,18 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="mb-4">Edit Product</h2>
+            <h2 class="mb-4">Edit Plan</h2>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit_plan' plan.id %}" class="" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy}}
                 <div class="text-right">
-                    <a href="{% url 'products' %}" class="btn btn-dark rounded-0">Cancel</a>
-                    <button class="btn btn-dark rounded-0" type="submit">Edit Product</button>
+                    <a href="{% url 'plans' %}" class="btn btn-dark rounded-0">Cancel</a>
+                    <button class="btn btn-dark rounded-0" type="submit">Edit Plan</button>
                 </div>
             </form>
         </div>
