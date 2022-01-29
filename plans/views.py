@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Plan, Plan_Category
-
+from .forms import PlanForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def view_plans(request):
@@ -35,3 +36,29 @@ def plan_detail(request, plan_id):
     }
 
     return render(request, 'plans/plan_detail.html', context)
+
+
+@login_required
+def add_plan(request):
+    """ Add a plan """
+    if not request.user.is_superuser:
+        messages.error(request, 'sorry, only admin has access to this')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = PlanForm(request.POST, request.FILES)
+        if form.is_valid():
+            plan = form.save()
+            messages.success(request, 'Successfully added plan')
+            return redirect(reverse('plan_detail', args=[plan.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = PlanForm()
+
+    template = 'plans/add_plan.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
