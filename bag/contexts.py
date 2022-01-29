@@ -13,7 +13,7 @@ def bag_contents(request):
     plan_count = 0
     bag = request.session.get('bag', {"products": {}, "plans": {}})
     plan = None
-    product = None
+    product = None 
 
     for key, value in bag.items():
         for item_id, item_data in bag[key].items():

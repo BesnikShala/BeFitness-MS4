@@ -15,10 +15,9 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add products and quantity to the bag """
 
-    
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    print(redirect_url)   
+    print(redirect_url)
     item_type = redirect_url.split("/")[1]
     size = None
     bag = request.session.get('bag', {"products": {}, "plans": {}})
