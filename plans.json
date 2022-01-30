@@ -1,1 +1,82 @@
-[{"model": "plans.plan_category", "pk": 4, "fields": {"name": "weight_management_plan", "friendly_name": "Weight Management Plan"}}, {"model": "plans.plan_category", "pk": 5, "fields": {"name": "strength_conditioning_plan", "friendly_name": "Strength and Conditioning Plan"}}, {"model": "plans.plan_category", "pk": 6, "fields": {"name": "calisthenics_plan", "friendly_name": "Calisthenics Plan"}}, {"model": "plans.plan", "pk": 100, "fields": {"plan_category": 6, "name": "Pull Up Workout Plan", "plan_length": "5", "difficulty": "7.2", "days_per_week": "5.0", "description": "If you’re trying to strengthen your upper body muscles, especially the back, biceps, and core, then you can try calisthenics pull exercises. The calisthenics pull workout increases strength, balance, flexibility, and improves upper body posture.", "equipment_needed": "Pull-up Bar", "price": "29.99", "rating": "4.60", "image": "pullup.jpeg"}}, {"model": "plans.plan", "pk": 101, "fields": {"plan_category": 6, "name": "Push Up Workout", "plan_length": "5", "difficulty": "6.5", "days_per_week": "5.0", "description": "This workout plan targets your pecks, arms and core to give you the ultimate strength that you need to be able to do pushups like a Marine. The Workout will grow muscle whilst defining it and burning fatcells. As you will not be lifting more than your bodyweight you can do more repetitions and gain that cut physique. The Plan consists of 5 days of exercise which are designed to target different sections of the chest, arms and the core. The Plan consists of 3 days a week of exercises which are designed to target different sections of the chest, arms and the core. Press ups are widely used even by the biggest gym goers as this exercise can be done anywhere, you do not require any special equipment or even environment. You can do this exercise at home, outside or even on lunch breaks. The press up or push up exercise targets many other secondary muscles which weightlifting such as bench press will not.You will receive in depth videos and guides which will give you a new plan each week. This is constantly evolving s there are many calisthenics exercises you can do almost anywhere.", "equipment_needed": "Yoga Mat (optional)", "price": "25.99", "rating": "4.80", "image": "pressup.jpeg"}}, {"model": "plans.plan", "pk": 102, "fields": {"plan_category": 6, "name": "Ab Crunch Workout", "plan_length": "3", "difficulty": "6.5", "days_per_week": "5.0", "description": "The Ab Crunch plan is designed to get rid of the 'dadbod' or the 'beerbelly'. This killer workout plan makes sure you not only get the weight and fat burning but so you also get a nice even workout of all the core ab muscles. The common mistake is doing one type of exercise repeteively as this will focus on only one set of muscles. The plan is designed to target the upper and lower abs, the obliques and serratus. The plan makes sure that you are not burning out one specific muslce group but a slow and steady icnrease in productitivty and muscle activation means you will feel much stronger and be left with a killer ab by the end.", "equipment_needed": "Yoga Mat (optional)", "price": "25.99", "rating": "4.80", "image": "abworkout.jpeg"}}, {"model": "plans.plan", "pk": 103, "fields": {"plan_category": 4, "name": "Cardio Burn Workout", "plan_length": "5", "difficulty": "8.0", "days_per_week": "6.0", "description": "This is the most intense fat burn exercise program on the market. This is designed for those who do not mind working 6 days a week to really target those areas of body fat. The calisthenics program means you do not need the traditional cardio equipment such as running machine or a bike. This requires body and limb strength and lots of core exercises. The key is to stress the muscles but not to a point where you burn out. The aim on the plan is to target the fat and not the muscles so we will be showing you exercises to maximise strength and weight-loss and ensuring you do not burn out those muscles.", "equipment_needed": "Yoga mat (optional), Medicine Ball (optional)", "price": "49.99", "rating": "9.20", "image": "sit-up.jpeg"}}]
+[{
+    "model": "plans.plan_category",
+    "pk": 4,
+    "fields": {
+        "name": "weight_management_plan",
+        "friendly_name": "Weight Management Plan"
+    }
+}, {
+    "model": "plans.plan_category",
+    "pk": 5,
+    "fields": {
+        "name": "strength_conditioning_plan",
+        "friendly_name": "Strength and Conditioning Plan"
+    }
+}, {
+    "model": "plans.plan_category",
+    "pk": 6,
+    "fields": {
+        "name": "calisthenics_plan",
+        "friendly_name": "Calisthenics Plan"
+    }
+}, {
+    "model": "plans.plan",
+    "pk": 100,
+    "fields": {
+        "plan_category": 6,
+        "name": "Pull Up Workout Plan",
+        "plan_length": "5",
+        "difficulty": "7.2",
+        "days_per_week": "5.0",
+        "description": "If you’re trying to strengthen your upper body muscles, especially the back, biceps, and core, then you can try calisthenics pull exercises. The calisthenics pull workout increases strength, balance, flexibility, and improves upper body posture.",
+        "equipment_needed": "Pull-up Bar",
+        "price": "29.99",
+        "rating": "4.60",
+        "image": "pullup.jpeg"
+    }
+}, {
+    "model": "plans.plan",
+    "pk": 101,
+    "fields": {
+        "plan_category": 6,
+        "name": "Push Up Workout",
+        "plan_length": "5",
+        "difficulty": "6.5",
+        "days_per_week": "5.0",
+        "description": "This workout plan targets your pecks, arms and core to give you the ultimate strength that you need to be able to do pushups like a Marine. The Workout will grow muscle whilst defining it and burning fatcells. As you will not be lifting more than your bodyweight you can do more repetitions and gain that cut physique. The Plan consists of 5 days of exercise which are designed to target different sections of the chest, arms and the core. The Plan consists of 3 days a week of exercises which are designed to target different sections of the chest, arms and the core. Press ups are widely used even by the biggest gym goers as this exercise can be done anywhere, you do not require any special equipment or even environment. You can do this exercise at home, outside or even on lunch breaks. The press up or push up exercise targets many other secondary muscles which weightlifting such as bench press will not.You will receive in depth videos and guides which will give you a new plan each week. This is constantly evolving s there are many calisthenics exercises you can do almost anywhere.",
+        "equipment_needed": "Yoga Mat (optional)",
+        "price": "25.99",
+        "rating": "4.80",
+        "image": "pressup.jpeg"
+    }
+}, {
+    "model": "plans.plan",
+    "pk": 102,
+    "fields": {
+        "plan_category": 6,
+        "name": "Ab Crunch Workout",
+        "plan_length": "3",
+        "difficulty": "6.5",
+        "days_per_week": "5.0",
+        "description": "The Ab Crunch plan is designed to get rid of the 'dadbod' or the 'beerbelly'. This killer workout plan makes sure you not only get the weight and fat burning but so you also get a nice even workout of all the core ab muscles. The common mistake is doing one type of exercise repeteively as this will focus on only one set of muscles. The plan is designed to target the upper and lower abs, the obliques and serratus. The plan makes sure that you are not burning out one specific muslce group but a slow and steady icnrease in productitivty and muscle activation means you will feel much stronger and be left with a killer ab by the end.",
+        "equipment_needed": "Yoga Mat (optional)",
+        "price": "25.99",
+        "rating": "4.80",
+        "image": "abworkout.jpeg"
+    }
+}, {
+    "model": "plans.plan",
+    "pk": 103,
+    "fields": {
+        "plan_category": 4,
+        "name": "Cardio Burn Workout",
+        "plan_length": "5",
+        "difficulty": "8.0",
+        "days_per_week": "6.0",
+        "description": "This is the most intense fat burn exercise program on the market. This is designed for those who do not mind working 6 days a week to really target those areas of body fat. The calisthenics program means you do not need the traditional cardio equipment such as running machine or a bike. This requires body and limb strength and lots of core exercises. The key is to stress the muscles but not to a point where you burn out. The aim on the plan is to target the fat and not the muscles so we will be showing you exercises to maximise strength and weight-loss and ensuring you do not burn out those muscles.",
+        "equipment_needed": "Yoga mat (optional), Medicine Ball (optional)",
+        "price": "49.99",
+        "rating": "9.20",
+        "image": "sit-up.jpeg"
+    }
+}]

@@ -1,1 +1,226 @@
-[{"model": "products.category", "pk": 1, "fields": {"name": "clothing", "friendly_name": "Clothing"}}, {"model": "products.category", "pk": 2, "fields": {"name": "gym_equipment", "friendly_name": "Gym Equipment"}}, {"model": "products.category", "pk": 10, "fields": {"name": "Supplements & Vitamins", "friendly_name": "supplements_vitamins"}}, {"model": "products.product", "pk": 1, "fields": {"category": 1, "name": "Nike Dri-FIT Cotton Tee", "description": "Get a tee that fits your active lifestyle, like this moisture-wicking, cotton-rich crewneck with crosshatch swoosh design.  Dri-FIT Cotton moisture management technology helps keep you cool and dry crewneck cotton/polyester washable imported", "has_sizes": false, "price": "29.99", "rating": "4.60", "image": "dp1028201517024563m.jpeg"}}, {"model": "products.product", "pk": 2, "fields": {"category": 1, "name": "Champion Jersey T-Shirt", "description": "Compete, exercise or simply relax in comfort with a classic tee from Champion, the brand that's been making quality athletic apparel since 1919.  regular fit crewneck taped neck left chest logo embroidery cotton except oxford and granite heather are cotton/polyester washable imported", "has_sizes": false, "price": "19.99", "rating": "3.50", "image": "dp0430201405053680m.jpeg"}}, {"model": "products.product", "pk": 3, "fields": {"category": 1, "name": "Nike Sport Hoodie", "description": "Add a cozy layer to any game-ready style with this insulated performance hoodie, featuring a pullover design and Therma-FIT fabric for warmth. Therma-FIT microfiber fleece fabric keeps you warm and insulated mesh-lined hood for breathable coverage long sleeves ribbed cuffs and hem kangaroo pocket polyester washable imported", "has_sizes": false, "price": "45.99", "rating": "4.80", "image": "dp1008201517035763m.jpeg"}}, {"model": "products.product", "pk": 4, "fields": {"category": 1, "name": "White Gym Tank Top", "description": "athletic t-shirts deliver the tagless comfort and breathable performance he needs.  super soft, quick-drying, durable fabric preshrunk for lasting fit reinforced durable stitching tag free cotton/polyester washable imported", "has_sizes": false, "price": "9.99", "rating": "4.20", "image": "0900631b81c9387bm.jpeg"}}, {"model": "products.product", "pk": 5, "fields": {"category": 1, "name": "Nike Dri-FIT Base Layer Tights", "description": "These Nike tights provide the comfort and mobility that help you to maximize your workout. elastic waistband compression fit moisture wicking polyester/spandex washable imported", "has_sizes": false, "price": "40.00", "rating": "4.00", "image": "dp0216201620412947c.jpeg"}}, {"model": "products.product", "pk": 6, "fields": {"category": 1, "name": "Champion Vapor Muscle Tank - Plus", "description": "Keep cool and dry during your workout in our muscle tank, made from Champion Vapor moisture-wicking fabric and featuring Fresh IQ technology for odor protection. Champion Vapor technology Fresh IQ technology targeted ventilation for breathability chafe-resistant flatlock seams reflective detail for visibility crewneck polyester washable imported", "has_sizes": false, "price": "27.99", "rating": "3.40", "image": "dp0217201617084849m.jpeg"}}, {"model": "products.product", "pk": 7, "fields": {"category": 1, "name": "Mesh Tank Top", "description": "Power through your workout with our quick dry tank top with mesh back for ventilation. quick dry no chafe seams mesh back for ventilation polyester/spandex washable imported", "has_sizes": false, "price": "33.99", "rating": "4.80", "image": "dp0309201620474626c.jpeg"}}, {"model": "products.product", "pk": 8, "fields": {"category": 1, "name": "Nike Dri-FIT Socks", "description": "With moisture-wicking fabric, durability and shock absorption, these socks go the extra mile so that you can too.  dri-FIT moisture technology wicking keeps feet cool and dry maximum breathability cushioned footbed for comfort arch compression for perfected fit reinforced heel & toe for durability cushioned foot nylon/cotton/polyester/spandex washable imported", "has_sizes": false, "price": "15.99", "rating": "3.90", "image": "dp0401201417083996m.jpeg"}}, {"model": "products.product", "pk": 9, "fields": {"category": 1, "name": "Nike Performance Socks", "description": "Keep him moving in comfort all day with quality Nike crew socks.  arch support reinforced toe and heel cotton/polyester/spandex washable imported", "has_sizes": false, "price": "18.99", "rating": "4.20", "image": "dp0510201317010521m.jpeg"}}, {"model": "products.product", "pk": 10, "fields": {"category": 1, "name": "Colorblock Yoga Shorts", "description": "From the yoga studio to the couch, these yoga shorts will keep her comfy during all her daily activities and feature cool contrasted side panels for an extra bit of flair.  black/aqua/green: cotton/spandex gray/pink/orange: cotton/polyester/spandex washable imported", "has_sizes": false, "price": "15.99", "rating": "4.90", "image": "dp1119201517043586m.jpeg"}}, {"model": "products.product", "pk": 11, "fields": {"category": 1, "name": "Short-Sleeve V-Neck Graphic Tee", "description": "You're always a winner with this sporty graphic t-shirt that shows your love of football. cotton/polyester washable imported", "has_sizes": false, "price": "20.99", "rating": "4.40", "image": "dp1222201517041287m.jpeg"}}, {"model": "products.product", "pk": 12, "fields": {"category": 1, "name": "Made For Life Mesh Jacket", "description": "Layer our moisture-wicking mesh jacket over a tee or tank for breathable comfort all day long. Quick-Dri moisture-wicking fabric helps keep you dry front pockets approx. 27\\\" - 28\\\" length polyester washable imported", "has_sizes": false, "price": "45.99", "rating": "4.70", "image": "dp0724201517031934m.jpeg"}}, {"model": "products.product", "pk": 13, "fields": {"category": 1, "name": "Sport Zip Hoodie", "description": "This soft fleece jacket is a heavyweight champ that works overtime to keep the chill away.  drawcord closure on hood kangaroo pocket rib-knit cuffs and waistband cotton/polyester washable imported", "has_sizes": false, "price": "82.99", "rating": "3.20", "image": "dp1108201317050996m.jpeg"}}, {"model": "products.product", "pk": 14, "fields": {"category": 1, "name": "Crew Neck T-shirt", "description": "Soft and comfortable, two of his favorite things together in this heavyweight cotton tee from Stafford.  combed cotton heavier fabric for durability preshunk for lasting fit premium seaming reduces twisting tag free cotton washable imported", "has_sizes": false, "price": "35.99", "rating": "4.20", "image": "dp1029201317111469m.jpeg"}}, {"model": "products.product", "pk": 15, "fields": {"category": 1, "name": "Nike Air Graphic T-shirt", "description": "Sick style is easily achieved with this colorful, Air-themed graphic tee from Nike, the one you want when you're getting ready to launch. non-restrictive crewneck short sleeves chest graphic with Swoosh 100% cotton washable imported", "has_sizes": false, "price": "29.99", "rating": "3.30", "image": "dp0515201517013144m.jpeg"}}, {"model": "products.product", "pk": 16, "fields": {"category": 2, "name": "Universal Gym Weight Lifting Wraps", "description": "The perfect essential gym equipment for lifting weight. These wraps support and protect your joints when lifting. Easy, comfortable and one size to fit all. Perfect for both men and women this wrap helps you grip and secure the weights from slipping and straining your wrists. Made with soft material and neoprene padding. Machine washable.", "has_sizes": false, "price": "9.99", "rating": "4.90", "image": "gymwraps.jpeg"}}, {"model": "products.product", "pk": 17, "fields": {"category": 2, "name": "Gym Weight Lifting Gloves", "description": "Test", "has_sizes": false, "price": "20.00", "rating": "3.50", "image": "gym-gloves.jpeg"}}]
+[{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "clothing",
+        "friendly_name": "Clothing"
+    }
+}, {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "gym_equipment",
+        "friendly_name": "Gym Equipment"
+    }
+}, {
+    "model": "products.category",
+    "pk": 10,
+    "fields": {
+        "name": "Supplements & Vitamins",
+        "friendly_name": "supplements_vitamins"
+    }
+}, {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "name": "Nike Dri-FIT Cotton Tee",
+        "description": "Get a tee that fits your active lifestyle, like this moisture-wicking, cotton-rich crewneck with crosshatch swoosh design.  Dri-FIT Cotton moisture management technology helps keep you cool and dry crewneck cotton/polyester washable imported",
+        "has_sizes": false,
+        "price": "29.99",
+        "rating": "4.60",
+        "image": "dp1028201517024563m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "name": "Champion Jersey T-Shirt",
+        "description": "Compete, exercise or simply relax in comfort with a classic tee from Champion, the brand that's been making quality athletic apparel since 1919.  regular fit crewneck taped neck left chest logo embroidery cotton except oxford and granite heather are cotton/polyester washable imported",
+        "has_sizes": false,
+        "price": "19.99",
+        "rating": "3.50",
+        "image": "dp0430201405053680m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "category": 1,
+        "name": "Nike Sport Hoodie",
+        "description": "Add a cozy layer to any game-ready style with this insulated performance hoodie, featuring a pullover design and Therma-FIT fabric for warmth. Therma-FIT microfiber fleece fabric keeps you warm and insulated mesh-lined hood for breathable coverage long sleeves ribbed cuffs and hem kangaroo pocket polyester washable imported",
+        "has_sizes": false,
+        "price": "45.99",
+        "rating": "4.80",
+        "image": "dp1008201517035763m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "category": 1,
+        "name": "White Gym Tank Top",
+        "description": "athletic t-shirts deliver the tagless comfort and breathable performance he needs.  super soft, quick-drying, durable fabric preshrunk for lasting fit reinforced durable stitching tag free cotton/polyester washable imported",
+        "has_sizes": false,
+        "price": "9.99",
+        "rating": "4.20",
+        "image": "0900631b81c9387bm.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "category": 1,
+        "name": "Nike Dri-FIT Base Layer Tights",
+        "description": "These Nike tights provide the comfort and mobility that help you to maximize your workout. elastic waistband compression fit moisture wicking polyester/spandex washable imported",
+        "has_sizes": false,
+        "price": "40.00",
+        "rating": "4.00",
+        "image": "dp0216201620412947c.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "category": 1,
+        "name": "Champion Vapor Muscle Tank - Plus",
+        "description": "Keep cool and dry during your workout in our muscle tank, made from Champion Vapor moisture-wicking fabric and featuring Fresh IQ technology for odor protection. Champion Vapor technology Fresh IQ technology targeted ventilation for breathability chafe-resistant flatlock seams reflective detail for visibility crewneck polyester washable imported",
+        "has_sizes": false,
+        "price": "27.99",
+        "rating": "3.40",
+        "image": "dp0217201617084849m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "category": 1,
+        "name": "Mesh Tank Top",
+        "description": "Power through your workout with our quick dry tank top with mesh back for ventilation. quick dry no chafe seams mesh back for ventilation polyester/spandex washable imported",
+        "has_sizes": false,
+        "price": "33.99",
+        "rating": "4.80",
+        "image": "dp0309201620474626c.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "category": 1,
+        "name": "Nike Dri-FIT Socks",
+        "description": "With moisture-wicking fabric, durability and shock absorption, these socks go the extra mile so that you can too.  dri-FIT moisture technology wicking keeps feet cool and dry maximum breathability cushioned footbed for comfort arch compression for perfected fit reinforced heel & toe for durability cushioned foot nylon/cotton/polyester/spandex washable imported",
+        "has_sizes": false,
+        "price": "15.99",
+        "rating": "3.90",
+        "image": "dp0401201417083996m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "category": 1,
+        "name": "Nike Performance Socks",
+        "description": "Keep him moving in comfort all day with quality Nike crew socks.  arch support reinforced toe and heel cotton/polyester/spandex washable imported",
+        "has_sizes": false,
+        "price": "18.99",
+        "rating": "4.20",
+        "image": "dp0510201317010521m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "category": 1,
+        "name": "Colorblock Yoga Shorts",
+        "description": "From the yoga studio to the couch, these yoga shorts will keep her comfy during all her daily activities and feature cool contrasted side panels for an extra bit of flair.  black/aqua/green: cotton/spandex gray/pink/orange: cotton/polyester/spandex washable imported",
+        "has_sizes": false,
+        "price": "15.99",
+        "rating": "4.90",
+        "image": "dp1119201517043586m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "category": 1,
+        "name": "Short-Sleeve V-Neck Graphic Tee",
+        "description": "You're always a winner with this sporty graphic t-shirt that shows your love of football. cotton/polyester washable imported",
+        "has_sizes": false,
+        "price": "20.99",
+        "rating": "4.40",
+        "image": "dp1222201517041287m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "category": 1,
+        "name": "Made For Life Mesh Jacket",
+        "description": "Layer our moisture-wicking mesh jacket over a tee or tank for breathable comfort all day long. Quick-Dri moisture-wicking fabric helps keep you dry front pockets approx. 27\\\" - 28\\\" length polyester washable imported",
+        "has_sizes": false,
+        "price": "45.99",
+        "rating": "4.70",
+        "image": "dp0724201517031934m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "category": 1,
+        "name": "Sport Zip Hoodie",
+        "description": "This soft fleece jacket is a heavyweight champ that works overtime to keep the chill away.  drawcord closure on hood kangaroo pocket rib-knit cuffs and waistband cotton/polyester washable imported",
+        "has_sizes": false,
+        "price": "82.99",
+        "rating": "3.20",
+        "image": "dp1108201317050996m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "category": 1,
+        "name": "Crew Neck T-shirt",
+        "description": "Soft and comfortable, two of his favorite things together in this heavyweight cotton tee from Stafford.  combed cotton heavier fabric for durability preshunk for lasting fit premium seaming reduces twisting tag free cotton washable imported",
+        "has_sizes": false,
+        "price": "35.99",
+        "rating": "4.20",
+        "image": "dp1029201317111469m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "category": 1,
+        "name": "Nike Air Graphic T-shirt",
+        "description": "Sick style is easily achieved with this colorful, Air-themed graphic tee from Nike, the one you want when you're getting ready to launch. non-restrictive crewneck short sleeves chest graphic with Swoosh 100% cotton washable imported",
+        "has_sizes": false,
+        "price": "29.99",
+        "rating": "3.30",
+        "image": "dp0515201517013144m.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "category": 2,
+        "name": "Universal Gym Weight Lifting Wraps",
+        "description": "The perfect essential gym equipment for lifting weight. These wraps support and protect your joints when lifting. Easy, comfortable and one size to fit all. Perfect for both men and women this wrap helps you grip and secure the weights from slipping and straining your wrists. Made with soft material and neoprene padding. Machine washable.",
+        "has_sizes": false,
+        "price": "9.99",
+        "rating": "4.90",
+        "image": "gymwraps.jpeg"
+    }
+}, {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "category": 2,
+        "name": "Gym Weight Lifting Gloves",
+        "description": "Test",
+        "has_sizes": false,
+        "price": "20.00",
+        "rating": "3.50",
+        "image": "gym-gloves.jpeg"
+    }
+}]

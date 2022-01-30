@@ -91,6 +91,10 @@ Click to view all Wireframes in folder [here!](https://github.com/BesnikShala/Be
 
 ### Database Schema
 
+![Database Schema](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/media/database-schem.jpeg)
+
+* The relationship database revolves around the two apps called Products and Plans. The design changed initially and I decided to make two different types of services. The plans are workout's which consumers can purchase. The products are physical products such as clothes and equipment. The core focus is the products and plans as Users can hopefully find what they are looking for. The link starts when a user creates a UserProfile which has all the necessary data which communicates with the order and orderlineitem. They can save their data and view their previous order on the profile page. 
+
 ## Features
 
 * View Products
@@ -121,18 +125,18 @@ Users are able to create a profile and upload a profile image. They are able to 
 
 The admin will be able to add new products, amend any product or even delete anything from the site including other posts.
 
-## Features Left to Implement
-
-* Share Progress / Post Status
-
-Users will be able to share their progress or experience with other befitness account holders. They are able to post a status, with full CRUD functionality to edit or delete their posts. 
-
-
 * Plans 
 
-Users can view and purchase different plans to suit their fitness needs. The users will be able to view plan details and add to cart to pruchase. 
+Users can view and purchase different plans to suit their fitness needs. The users will be able to view plan details and add to cart to purchase.
 
 
+
+
+## Features Left to Implement
+
+* Product Reviews
+
+Users will be able to write a review and view reviews of products/plans. 
 
 ## Technologies
 
