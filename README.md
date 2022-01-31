@@ -29,15 +29,9 @@ BeFitness is a E-commerce site where users are able to purchase fitness products
 
 * Securely be able to checkout and pay for products.
 
-* Be able to create my own profile and post my exercise progress.
-
-* Be able to view, like and comment on other posts. 
-
-* Be able to delete any posts that I make.
-
 * View my order history.
 
-* Edit my profile and delivery information.
+* Edit my profile delivery information.
 
 * Select product sizes where applicable.
 
@@ -46,8 +40,6 @@ BeFitness is a E-commerce site where users are able to purchase fitness products
 ### As a Site Owner, I want to:
 
 * Be able to add, edit or delete products/services.
-
-* Be able to delete posts as a superuser.
 
 * Be able to encourage users to sign up to the site.
 
@@ -83,11 +75,11 @@ Click to view all Wireframes in folder [here!](https://github.com/BesnikShala/Be
 
 ![Wireframe 1](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/login-wireframe.jpeg)
 ![Wireframe 2](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/register-wireframe.jpeg)
-![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/home-wireframe.jpeg)
-![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/product-wireframe.jpeg)
-![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/product-detail-wireframe.jpeg)
-![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/profile-wireframe.jpeg)
-![Wrieframe](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/plan-wireframe.jpeg)
+![Wrieframe 3](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/home-wireframe.jpeg)
+![Wrieframe 4](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/product-wireframe.jpeg)
+![Wrieframe 5](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/product-detail-wireframe.jpeg)
+![Wrieframe 6](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/profile-wireframe.jpeg)
+![Wrieframe 7](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/wireframes/plan-wireframe.jpeg)
 
 ### Database Schema
 
@@ -97,9 +89,25 @@ Click to view all Wireframes in folder [here!](https://github.com/BesnikShala/Be
 
 ## Features
 
+* Navigation
+
+Users are able to easily navigate the site via navbar. They also have the use of back buttons when viewing products/plans or in the checkout services. 
+
 * View Products
 
 Users are able to view products within categories. They have the option to expand the product to view product details. At this point they can view product information and have more options to add to bag or return to view other products.
+
+* View Fitness Plans
+
+Users are able to view the plans within categories just as products. They can also expand the plans to show a different layout as the plans will hold more information than the products. 
+
+* Select Quantity
+
+Users can specify the quantity of the products/plans they want to purchase. 
+
+* Sorting Plans
+
+Users can sort between plans via category, price, rating and name. This gives the user more flexibility in narrowing down what they want. 
 
 * Sorting Products
 
@@ -113,26 +121,40 @@ Users are able to search products by key words from the navbar. A responsive sea
 
 Users are able to complete a payment via stripe. They will need to create an account if they want to save order details to their profile or to save products to their cart. 
 
+* Real Email Confirmation
+
+Users will receive a confirmation of their order with the details they provided. The email will come from Gmail.com, which is the platform used for this service. 
+
 * Select Size
 
 Users can choose sizes and quantity on products which have sizes. They can also alter the quantity within the checkout cart before payment. 
 
 * Create a Profile / Register
 
-Users are able to create a profile and upload a profile image. They are able to save order information and billing/delivery details. 
+Users are able to create a profile. They are able to save order information and billing/delivery details.
 
 * Add / Edit / Delete Products
 
 The admin will be able to add new products, amend any product or even delete anything from the site including other posts.
 
+* Validate on Delete
+
+The admin may accidentally press the delete button, if so there will be a prompt to confirm if the item selected is to be deleted. The confirmation link will trigger the view to delete the item. Another will redirect back to the main page. 
+
 * Plans 
 
 Users can view and purchase different plans to suit their fitness needs. The users will be able to view plan details and add to cart to purchase.
 
+* Toast Messages
 
+The user and admin will be notfied when using features around the site. If the checkout or bag is used a message will pop up via a toast from bootstrap. This notifies the user of any actions carrief out. It will also notfify of any errors.
 
 
 ## Features Left to Implement
+
+* Remove Plans from checkout
+
+There was a clash with two apps (products and plans) merging together to work with the bag app. I did not have time to fix the issue of removing plans in the checkout.
 
 * Product Reviews
 
