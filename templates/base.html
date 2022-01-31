@@ -7,9 +7,9 @@
 
     {% block meta %}
 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% endblock %}
 
     {% block corecss %}
@@ -42,8 +42,6 @@
 
     <title>BeFitness{% block extra_title %}{% endblock %}</title>
 </head>
-
-<body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg d-none pt-lg-2 d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -56,7 +54,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input type="text" name="q" placeholder="Search" class="form-control">
+                        <input type="text" name="q" placeholder="Search products" class="form-control">
                         <div class="input-group-append">
                             <button class="form-control border" type="submit">
                                 <span class="icon">
@@ -67,46 +65,46 @@
                     </div>
                 </form>
             </div>
-            <div class="btn-group col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-right account-cart" role="group"
-                aria-label="Button group with nested dropdown">
-                <div class="btn-group text-lg-right my-0" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"> Account</i>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a>
-                                <a class="dropdown-item" href="{% url 'add_plan' %}">Add Plan</a>
-                            {% endif %}
-                            <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
-                            <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
-                            {% else %}
-                                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                                <a class="dropdown-item" href="{% url 'account_login' %}">Log In</a>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="">
-                    <a class="text-small my-0" href="{% url 'view_bag' %}">
-                        <div class="text-center">
-                            <i class="fas fa-cart-arrow-down"> Cart</i>
-                            <p class="my-0">
-                                {% if grand_total %}
-                                £{{ grand_total|floatformat:2 }}
-                                {% else %}
-                                £0.00
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-right">
+                <div class="btn-group col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-right" role="group"
+                    aria-label="Button group with nested dropdown">
+                    <div class="btn-group text-lg-right my-0 p-2" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"> Account</i>
+                        </button>
+                        <br>
+                        <a class="text-small my-0 btn-dark" href="{% url 'view_bag' %}">
+                            <div class="text-center account-cart p-2">
+                                <i class="fas fa-cart-arrow-down"> Cart</i>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a>
+                                    <a class="dropdown-item" href="{% url 'add_plan' %}">Add Plan</a>
                                 {% endif %}
-                            </p>
+                                <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
+                                {% else %}
+                                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                                    <a class="dropdown-item" href="{% url 'account_login' %}">Log In</a>
+                            {% endif %}
                         </div>
-                    </a>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row bg-black">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="row mobile-nav">
+            <nav class="navbar navbar-expand-lg w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle-navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -116,6 +114,7 @@
             </nav>
         </div>
     </header>
+<body>
 
     {% if messages %}
         <div class="message-container">
