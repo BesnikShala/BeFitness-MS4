@@ -17,7 +17,6 @@ def add_to_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    print(redirect_url)
     item_type = redirect_url.split("/")[1]
     size = None
     bag = request.session.get('bag', {"products": {}, "plans": {}})
@@ -40,9 +39,7 @@ def add_to_bag(request, item_id):
             messages.success(request, f'Added {plan.name} to your bag')
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
-    print(redirect_url)
 
 
 def adjust_bag(request, item_id):

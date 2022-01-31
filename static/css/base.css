@@ -16,14 +16,18 @@ body {
     color: #f9d100;
     background-color: #f9d100;
     min-height: 100px;
+}
+
+#main-nav {
+    background-color: #f9d100;
+}
+
+.mobile-nav {
+    background-color: #f9d100;
 
 }
 
 .bg-black {
-    background-color: black;
-}
-
-#main-nav {
     background-color: black;
 }
 
@@ -36,6 +40,12 @@ body {
 
 .shop-button {
     background-color: #ffd026
+}
+
+.account-cart {
+    padding: 4px;
+    padding-left: 10px;
+    color: black;
 }
 
 /* category buttons */
@@ -109,6 +119,12 @@ span.badge {
     z-index: 9999;
 
 } */
+
+/* Checkout Cart */
+
+.cart-buttons span {
+    min-width: 20px;
+}
 
 .bag-notification {
     height: 120px;
