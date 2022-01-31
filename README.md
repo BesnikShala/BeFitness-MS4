@@ -1,4 +1,7 @@
-# BeFitness | Milestone PRoject 4
+![Responsive](https://github.com/BesnikShala/BeFitness-MS4/blob/main/testing/media/responsive.jpeg?raw=true)
+
+
+# BeFitness | Milestone Project 4
 
 BeFitness is a E-commerce site where users are able to purchase fitness products, nutrition plans and exercise plans. Users can browse the site for their needs to achieve their fitness goals. They can set up an account in order to complete purchases, rate products, and even post their fitness gains and achievments. The site allows the owner to create online sales via products or fitness plans, adding a social aspect to the site can generate more online traffic and attention to the site hopefully generating more sales and giving users a reason to come back. 
 
