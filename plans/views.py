@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Plan, Plan_Category
 from .forms import PlanForm
 from django.contrib.auth.decorators import login_required
@@ -11,16 +12,35 @@ def view_plans(request):
 
     plans = Plan.objects.all()
     plan_categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                plans = plans.annotate(lower_name=Lower('name'))
+            if sortkey == 'plan_category':
+                sortkey = 'plan_category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            plans = plans.order_by(sortkey)
+
         if 'plan_category' in request.GET:
             plan_categories = request.GET['plan_category'].split(',')
             plans = plans.filter(plan_category__name__in=plan_categories)
             plan_categories = Plan_Category.objects.filter(name__in=plan_categories)
+    
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'plans': plans,
-        'current_categories': plan_categories
+        'current_categories': plan_categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'plans/plans.html', context)

@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <p class="text-muted mt-3 text-center text-md-left pl-5">
-                Displaying {{ products|length }} Products {% if search_term %} found for
+                Displaying {{ plans|length }} plans {% if search_term %} found for
                 <strong>"{{ search_term }}"</strong>{% endif %}
                 {% if search_term %}
                 {% endif %}
@@ -35,14 +35,14 @@
             <ul class="list-style">
                 {% for c in current_categories %}
                 <li class="list-style">
-                    <a href="{% url 'products' %}?category={{ c.name }}" class="text-decoration-none side-badge">
+                    <a href="{% url 'plans' %}?plan_category={{ c.name }}" class="text-decoration-none side-badge">
                         <span class="p-2 mt-2 badge badge-dark rounded-0 border w-100">{{ c.friendly_name }}</span>
                     </a>
                 </li>
                 {% endfor %}
             </ul>
 
-            <!-- Accordian for sorting through products -->
+            <!-- Accordian for sorting through plans -->
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <h3 class="side-heading">Sort</h3>
                 <div class="accordion-item">
@@ -58,11 +58,11 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href=" {% url 'products' %}?sort=price&direction=asc">Price
+                                        href=" {% url 'plans' %}?sort=price&direction=asc">Price
                                         (low to
                                         high</a></button>
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href=" {% url 'products' %}?sort=price&direction=desc">Price
+                                        href=" {% url 'plans' %}?sort=price&direction=desc">Price
                                         (high to
                                         low)</a></button>
                             </div>
@@ -80,11 +80,11 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'products' %}?sort=rating&direction=asc">Rating
+                                        href="{% url 'plans' %}?sort=rating&direction=asc">Rating
                                         (low to
                                         high</a></button>
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href=" {% url 'products' %}?sort=rating&direction=desc">Rating
+                                        href=" {% url 'plans' %}?sort=rating&direction=desc">Rating
                                         (high to
                                         low)</a></button>
                             </div>
@@ -102,11 +102,11 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'products' %}?sort=name&direction=desc">Name
+                                        href="{% url 'plans' %}?sort=name&direction=desc">Name
                                         (A-Z)
                                     </a></button>
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'products' %}?sort=name&direction=asc">Name
+                                        href="{% url 'plans' %}?sort=name&direction=asc">Name
                                         (Z-A)
                                     </a></button>
                             </div>
@@ -124,10 +124,10 @@
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'products' %}?sort=category&direction=asc">Category
+                                        href="{% url 'plans' %}?sort=plan_category&direction=asc">Category
                                         (A-Z)</a></button>
                                 <button class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'products' %}?sort=category&direction=desc">Category
+                                        href="{% url 'plans' %}?sort=plan_category&direction=desc">Category
                                         (Z-A)</a></button>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
         </div>
         <div class="plan-container col-10 mt-5">
             <div class="row">
-                <!-- for loop to iterate through products/generate column card -->
+                <!-- for loop to iterate through plans/generate column card -->
                 {% for plan in plans %}
                 <div class="col-sm-5 col-md-4 col-xl-3">
                     <div class="card h-100 border-0">
@@ -160,11 +160,11 @@
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold">£{{ plan.price }}</p>
-                                        {% if plan.category %}
+                                        {% if plan.plan_category %}
                                         <p class="small mt-1 mb-0">
-                                            <a href="{% url 'plans' %}?category={{ plan.category.name }}"
+                                            <a href="{% url 'plans' %}?plan_category={{ plan.plan_category.name }}"
                                                 class="text-muted">
-                                                <i class="fas fa-tags mr-1"></i>{{ plan.category.friendly_name }}
+                                                <i class="fas fa-tags mr-1"></i>{{ plan.plan_category.friendly_name }}
                                             </a>
                                         </p>
                                         {% endif %}
