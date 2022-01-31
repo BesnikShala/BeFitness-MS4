@@ -211,5 +211,12 @@ Outcome: This passed as toasts pop up when a view is triggered.
 
 ![]()
 
+## Validators
+
+### HTML
+
+
+
+
 
 
