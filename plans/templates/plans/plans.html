@@ -47,7 +47,7 @@
                 <h3 class="side-heading">Sort</h3>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingOne">
-                        span class="badge btn-dark w-100" type="button" data-toggle="collapse"
+                        <button class="badge btn-dark w-100" type="button" data-toggle="collapse"
                             data-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                             aria-controls="panelsStayOpen-collapseOne">
                             By Price
@@ -57,14 +57,15 @@
                         aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href=" {% url 'plans' %}?sort=price&direction=asc">Price
+                                <a class="sort-text" href=" {% url 'plans' %}?sort=price&direction=asc"><span
+                                        class="btn w-100" type="button">Price
                                         (low to
-                                        high</a></span>
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href=" {% url 'plans' %}?sort=price&direction=desc">Price
+                                        high</span></a>
+                                <a class="sort-text" href=" {% url 'plans' %}?sort=price&direction=desc">
+                                    <span class="btn w-100" type="button">Price
                                         (high to
-                                        low)</a></span>span
+                                        low)</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -79,15 +80,18 @@
                     <div class="collapse" id="collapseExample1">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'plans' %}?sort=rating&direction=asc">Rating
+                                <a class="sort-text" href="{% url 'plans' %}?sort=rating&direction=asc"><span
+                                        class="btn w-100" type="button">Rating
                                         (low to
-                                        high</a></span>
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href=" {% url 'plans' %}?sort=rating&direction=desc">Rating
-                                        (high to
-                                        low)</a></span>
-                            </div>span
+                                        high</span></a>
+                                <a class="sort-text" href=" {% url 'plans' %}?sort=rating&direction=desc">
+                                <span class="btn w-100" type="button">
+                                    Rating
+                                    (high to
+                                    low)
+                                </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,17 +105,20 @@
                     <div class="collapse" id="collapseExample2">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'plans' %}?sort=name&direction=desc">Name
-                                        (A-Z)
-                                    </a></span>
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'plans' %}?sort=name&direction=asc">Name
-                                        (Z-A)
-                                    </a></span>
+                                
+                                <a class="sort-text" href="{% url 'plans' %}?sort=name&direction=desc">
+                                    <span class="btn w-100" type="button">Name
+                                        (A-Z)</span>
+                                </a>
+
+                                
+                                <a class="sort-text" href="{% url 'plans' %}?sort=name&direction=asc">
+                                    <span class="btn w-100" type="button">Name
+                                        (Z-A)</span>
+                                </a>
                             </div>
                         </div>
-                    </div>span
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header side-badge" id="panelsStayOpen-headingFour">
@@ -123,12 +130,15 @@
                     <div class="collapse" id="collapseExample3">
                         <div class="accordion-body bg-white">
                             <div class="d-grid gap-2">
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'plans' %}?sort=plan_category&direction=asc">Category
-                                        (A-Z)</a></span>
-                                <span class="btn w-100" type="button"><a class="sort-text"
-                                        href="{% url 'plans' %}?sort=plan_category&direction=desc">Category
-                                        (Z-A)</a></span>
+                                <a class="sort-text" href="{% url 'plans' %}?sort=plan_category&direction=asc">
+                                    <span class="btn w-100" type="button">Category
+                                        (A-Z)</span>
+                                </a>
+                                <a class="sort-text"
+                                    spanhref="{% url 'plans' %}?sort=plan_category&direction=desc">
+                                <span class="btn w-100" type="button">Category
+                                    (Z-A)</span>
+                                </a>
                             </div>
                         </div>
                     </div>
