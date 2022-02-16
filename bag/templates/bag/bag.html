@@ -15,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
     <div class="overlay"></div>
     <div class="row">
         <div class="col col-md-6 offset-2">
@@ -136,7 +137,7 @@
                                {% endif %}
                             {% endfor %}
                         </table>
-                        <div class="col-sm-12 offset-1 cart-buttons">
+                        <div class="col-sm-12">
                             <div class="pt-5 text-center">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
@@ -165,6 +166,7 @@
                                     <span class="text-uppercase">Back to Products</span>
                                 </a>
                             </div>
+                        </div>
                     </div>
                 {% else %}
                     <div class="col-12 text-center">
@@ -177,9 +179,9 @@
                     </a>
                     </div>
             {% endif %}
-            </div>
+        </div>
     </div>
-
+</div>
 {% endblock %}
 
 {% block postloadjs %}
