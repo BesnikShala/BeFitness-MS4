@@ -18,7 +18,7 @@
 <div class="container">
     <div class="overlay"></div>
     <div class="row">
-        <div class="col col-md-6 offset-2">
+        <div class="col col-md-6 offset-md-3">
             {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
@@ -78,9 +78,6 @@
                                                    data-product-size="{{ item.size }}"><small>Remove</small></a>
                                            </div>
                                     </td>
-                                    <td>
-                                        Sub total:
-                                    </td>
                                 </tr>
                                {% elif 'plan' in item %}
                                <tr>
@@ -130,42 +127,43 @@
                                        </div>
                         
                                    </td>
-                                   <td>
-                                   </td>
                                </tr>
                                {% endif %}
                             {% endfor %}
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <div class="col-sm-12">
+                                            <div class="pt-5 text-center">
+                                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                                <h4 class="mt-4"><strong>Grand Total:
+                                                        ${{ grand_total|floatformat:2 }}</strong>
+                                                </h4>
+                                                {% if free_delivery_delta > 0 %}
+                                                <p class="mb-1 text-danger">
+                                                    If you spend<strong>${{ free_delivery_delta }}</strong> more!
+                                                    You will get free delivery.
+                                                </p>
+                                                {% endif %}
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 btn-lg">
+                                                    <span class="text-uppercase">Checkout Securely</span>
+                                                </a>
+                                            </div>
+                                            <br>
+                                                <div class="col-12 text-center">
+                                                    <a class="btn btn-dark rounded-0 btn-lg"
+                                                           href="{% url 'products' %}">
+                                                        <span class="text-uppercase">Back to
+                                                               Products</span>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </td>
+                                </tr>
                         </table>
-                        <div class="col-sm-12">
-                            <div class="pt-5 text-center">
-                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                {% if free_delivery_delta > 0 %}
-                                <p class="mb-1 text-danger">
-                                    If you spend<strong>${{ free_delivery_delta }}</strong> more!
-                                    You will get free delivery.
-                                </p>
-                                {% endif %}
-                            </div>
-                            <div class="col-12 text-center">
-                                <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 btn-lg">
-                                    <span class="text-uppercase">Checkout Securely</span>
-                                    <span class="icon">
-                                        <a href="" class="fas fa-lock"></a>
-                                    </span>
-                                </a>
-                            </div>
-                            <br>
-                            <div class="col-12 text-center">
-                                <a class="btn btn-dark rounded-0 btn-lg" href="{% url 'products' %}">
-                                    <span class="icon">
-                                        <i class="fas fa-arrow"></i>
-                                    </span>
-                                    <span class="text-uppercase">Back to Products</span>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 {% else %}
                     <div class="col-12 text-center">
