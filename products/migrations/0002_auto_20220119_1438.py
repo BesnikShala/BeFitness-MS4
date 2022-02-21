@@ -14,17 +14,17 @@ class Migration(migrations.Migration):
             name='category',
             options={'verbose_name_plural': 'Categories'},
         ),
-        migrations.RemoveField(
-            model_name='product',
-            name='image_url',
-        ),
-        migrations.RemoveField(
-            model_name='product',
-            name='sku',
-        ),
-        migrations.AddField(
-            model_name='product',
-            name='has_sizes',
-            field=models.BooleanField(blank=True, default=False, null=True),
-        ),
+        # migrations.RemoveField(
+        #     model_name='product',
+        #     name='image_url',
+        # ),
+        # migrations.RemoveField(
+        #     model_name='product',
+        #     name='sku',
+        # ),
+        # migrations.AddField(
+        #     model_name='product',
+        #     name='has_sizes',
+        #     field=models.BooleanField(blank=True, default=False, null=True),
+        # ),
     ]
