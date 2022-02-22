@@ -3,7 +3,7 @@ Dear {{ order.full_name }},
 Thank you for your recent purchase with BeFitness. Please see your order details below:
 
 Order Date : {{ order.date }}.
-Order Number: {{ order.number }}.
+Order Number: {{ order.order_number }}.
 
 Order Total: £{{ order.order_total }}
 Delivery Cost: £{{ order.delivery_cost }}.
@@ -13,7 +13,7 @@ Delivery details:
 
 Address: {{ order.street_address }}
 Town / City: {{ order.town_or_city }}
-Post Code: {{ order.post_code }}
+Post Code: {{ order.postcode }}
 County: {{ order.county }}
 
 If you have any questions or would like to schedule a special delivery please contact us at {{ contact_email }}.
