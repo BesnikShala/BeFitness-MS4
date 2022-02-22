@@ -129,7 +129,7 @@ class StripeWH_Handler:
                 bag_as_dict = json.loads(bag)
 
                 if bag_as_dict["products"]:
-                    for item_id, item_data in json.loads(bag).items():
+                    for item_id, item_data in json.loads(bag)['products'].items():
                         product = Product.objects.get(id=item_id)
                         if isinstance(item_data, int):
                             order_line_item = OrderLineItem(
@@ -149,7 +149,7 @@ class StripeWH_Handler:
                                 order_line_item.save()
 
                 if bag_as_dict["plans"]:
-                    for item_id, item_data in json.loads(bag).items():
+                    for item_id, item_data in json.loads(bag)['plans'].items():
                         plan = Plan.objects.get(id=item_id)
                         if isinstance(item_data, int):
                             order_line_item = OrderLineItem(
