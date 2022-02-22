@@ -79,9 +79,11 @@ class OrderLineItem(models.Model):
         if self.product is None:
             self.lineitem_total = self.plan.price * self.quantity
 
-        
+
         if self.plan is None:
             self.lineitem_total = self.product.price * self.quantity
+
+        super().save(*args, **kwargs)
 
 
     def __str__(self):
