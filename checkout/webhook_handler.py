@@ -4,8 +4,12 @@ from django.template.loader import render_to_string
 from django.conf import settings
 
 from .models import Order, OrderLineItem
+
 from products.models import Product
+from plans.models import Plan
 from profiles.models import UserProfile
+
+
 
 import json
 import time
@@ -121,24 +125,40 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(bag).items():
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
+
+                bag_as_dict = json.loads(bag)
+
+                if bag_as_dict["products"]:
+                    for item_id, item_data in json.loads(bag).items():
+                        product = Product.objects.get(id=item_id)
+                        if isinstance(item_data, int):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=quantity,
-                                product_size=size,
+                                quantity=item_data,
                             )
                             order_line_item.save()
+                        else:
+                            for size, quantity in item_data['items_by_size'].items():
+                                order_line_item = OrderLineItem(
+                                    order=order,
+                                    product=product,
+                                    quantity=quantity,
+                                    product_size=size,
+                                )
+                                order_line_item.save()
+
+                if bag_as_dict["plans"]:
+                    for item_id, item_data in json.loads(bag).items():
+                        plan = Plan.objects.get(id=item_id)
+                        if isinstance(item_data, int):
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                plan=plan,
+                                quantity=item_data,
+                            )
+                            order_line_item.save()
+
             except Exception as e:
                 if order:
                     order.delete()
