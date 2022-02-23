@@ -73,7 +73,7 @@ def checkout(request):
                         order_line_item.save()
 
                 if bag['plans']:
-                   for item_id, item_data in bag['plans'].items():
+                    for item_id, item_data in bag['plans'].items():
                         order_line_item = OrderLineItem(
                             order=order,
                             plan=Plan.objects.get(pk=item_id),
