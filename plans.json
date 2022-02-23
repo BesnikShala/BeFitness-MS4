@@ -79,4 +79,19 @@
         "rating": "9.20",
         "image": "sit-up.jpeg"
     }
+}, {
+    "model": "plans.plan",
+    "pk": 105,
+    "fields": {
+        "plan_category": 5,
+        "name": "Upper Body Strength Plan",
+        "plan_length": "5.5",
+        "difficulty": "8.0",
+        "days_per_week": "5.5",
+        "description": "This plan is a mixture of upper body calisthenics exercises which is designed to target the main core and upper body muscles. The chest and arms along with the back are the key target here. The videos we send provide the best way to target these areas. The plan is broken down into sections which start with Push-Ups and pull-ups then focus on core exercises with planks and angled push and pull exercises. It is important to give recovery time for muscle groups ensuring they are not overworked. Once a primary muscle has been targeted the next exercise should mean that this section is not used or at best will be a secondary muscle group. Start today to get your plan and build your muscle styrength.",
+        "equipment_needed": "Yoga mat (optional), Pull Up Bar (optional)",
+        "price": "45.00",
+        "rating": "4.90",
+        "image": "pressup.jpeg"
+    }
 }]
