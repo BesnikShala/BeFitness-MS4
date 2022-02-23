@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = os.environ.get('DEVELOPMENT')
+DEBUG = os.environ.get('DEBUG')
 
 
 ALLOWED_HOSTS = ['befitness-ms4.herokuapp.com', 'localhost']
@@ -223,7 +223,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
 
-if 'DEVELOPMENT' in os.environ:
+if os.environ.get('DEBUG'):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'bs1992@mail.com'
 else:
