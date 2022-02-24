@@ -85,10 +85,6 @@
                                                 value="{% if 'product' in item %}product{% elif 'plan' in item %}plan{% endif %}">
                                             <input type="submit" value="Remove" class="btn">
                                         </form>
-                                           <!-- <div class="my-auto p-2">
-                                               <a class="remove-item text-danger" id="remove_{{ item.item_id }}"
-                                                   data-product-size="{{ item.size }}"><small>Remove</small></a>
-                                           </div> -->
                                     </td>
                                 </tr>
                                {% elif 'plan' in item %}
@@ -138,11 +134,6 @@
                                            <input type="hidden" name="item_type" value="{% if 'product' in item %}product{% elif 'plan' in item %}plan{% endif %}">
                                            <input type="submit" value="Remove" class="btn">
                                        </form>
-                                       <!-- <div class="my-auto p-2">
-                                           <a class="remove-item text-danger" id="remove_{{ item.item_id }}"
-                                               data-product-size="{{ item.size }}"><small>Remove</small></a>
-                                       </div> -->
-                        
                                    </td>
                                </tr>
                                {% endif %}
