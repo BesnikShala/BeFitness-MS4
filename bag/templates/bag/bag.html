@@ -44,7 +44,7 @@
                                                 N/A
                                             {% endif %}
                                         </p>
-                                        <form method="POST" class="form update-form">
+                                        <form method="POST" class="form update-form" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -75,7 +75,14 @@
                                                     <input type="hidden" name="size" value="{{ item.size }}">
                                                     {% endif %}
                                                 </div>
+                                                <a class="update-link text-info"><small>Update</small></a>
                                             </div>
+                                            <input type="hidden" name="item_id"
+                                                value="{% if 'product' in item %}{{ item.product.id }}{% endif %}">
+                                            <input type="hidden" name="item_type"
+                                                value="{% if 'product' in item %}product{% endif %}">
+                                            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                                            <input type="submit" value="Update" class="btn update-form">
                                         </form>
                                         <form class="remove-item">
                                             <input type="hidden" value="{{ csrf_token }}" name="csrf_token">
@@ -97,7 +104,8 @@
                                        <p class="my-3"><strong>Price:
                                                £{{ item.plan.price | calc_subtotal:item.quantity }}</strong></p>
                                        <p class="my-3">
-                                       <form method="POST" class="form update-form">
+                                       <form method="POST" class="form"
+                                           action="{% url 'adjust_bag' item.item_id %}">
                                            {% csrf_token %}
                                            <div class="form-group">
                                                <div class="input-group">
@@ -127,6 +135,10 @@
                                                    </div>
                                                </div>
                                            </div>
+                                            <input type="hidden" name="item_id" value="{% if 'plan' in item %}{{ item.plan.id }}{% endif %}">
+                                            <input type="hidden" name="item_type" value="{% if 'plan' in item %}plan{% endif %}">
+                                            <input type="hidden" name="csrf_token"  value="{{ csrf_token }}">
+                                            <input type="submit" value="Update" class="btn update-form">
                                        </form>
                                        <form class="remove-item">
                                            <input type="hidden" value="{{ csrf_token }}" name="csrf_token">
@@ -194,20 +206,33 @@
 {% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
+    $('.update-form').click(function(e) {
+        // var form = $(this).prev('.update-form');
+        // form.submit();
+         event.preventDefault()
+         const form = event.target.parentElement;
+         const url = `/bag/adjust/${form.item_id.value}/`;
+         const data = {
+         'csrfmiddlewaretoken': form.csrf_token.value,
+         'item_type': form.item_type.value,
+         'item_id': form.item_id.value,
+         'quantity': form.quantity.value
+         };
+
+         $.post(url, data).done(function() {
+         location.reload();
+         });
     })
 
     // Remove item and reload on click
-    $('form').submit(function(event) {
+    $('.remove-item').submit(function(event) {
         event.preventDefault()
         const form = event.target;
         const url = `/bag/remove/${form.item_id.value}/`;
         const data = {
             'csrfmiddlewaretoken': form.csrf_token.value,
             'item_type': form.item_type.value,
-            'item_id': form.item_id.value
+            'item_id': form.item_id.value,
         };
 
         $.post(url, data).done(function() {
