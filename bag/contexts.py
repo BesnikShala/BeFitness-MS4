@@ -47,6 +47,7 @@ def bag_contents(request):
                         'size': size,
                     })
 
+    bag_cart_items = product_count + plan_count 
     grand_total = total
 
     context = {
@@ -55,6 +56,7 @@ def bag_contents(request):
         'product_count': product_count,
         'plan_count': plan_count,
         'grand_total': grand_total,
+        'bag_cart_items': bag_cart_items,
     }
 
     return context
