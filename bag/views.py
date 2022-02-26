@@ -14,6 +14,7 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """ Add products and quantity to the bag """
+
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     item_type = redirect_url.split("/")[1]
@@ -21,6 +22,7 @@ def add_to_bag(request, item_id):
 
     if item_type == "products":
         product = get_object_or_404(Product, pk=item_id)
+        print(product)
         if item_id in list(bag['products'].keys()):
             bag['products'][item_id] += quantity
             messages.success(request, f'Updated {product.name} quantity to {bag["products"][item_id]}')
@@ -38,6 +40,41 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """ Adjust the quantity of the sepcified product """
+
+    quantity = int(request.POST.get('quantity'))
+    item_type = request.POST['item_type']
+    bag = request.session.get('bag', {"products": {}, "plans": {}})
+    print(request.POST.get('quantity'))
+    print(request.POST['item_type'])
+
+    if item_type == "product":
+        product = get_object_or_404(Product, pk=item_id)
+        if quantity > 0:
+            products_bag = bag['products']
+            products_bag[item_id] = quantity
+            messages.success(request, f'Updated {product.name} quantity to {products_bag[item_id]}')
+        else:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from your bag')
+
+    elif item_type == "plan":
+        plan = get_object_or_404(Plan, pk=item_id)
+        plans_bag = bag['plans']
+        if quantity > 0:
+            plans_bag[item_id] = quantity
+            messages.success(request, f'Updated {plan.name} quantity to {plans_bag[item_id]}')
+        else:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {plan.name} from your bag')
+
+    request.session['bag'] = bag
+    print(bag)
+    return redirect(reverse('view_bag'))
+
 
 
 def remove_from_bag(request, item_id):
