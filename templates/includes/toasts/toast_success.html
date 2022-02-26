@@ -13,22 +13,36 @@
             <hr>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p>Your Cart ({{ product_count }})</p>
+            <p>Your Cart ({{ bag_cart_items }})</p>
             <hr>
             <div class="cart-items bag-notification">
                 {% for item in bag_items %}
-                    <div class="col-3 ml-3">
-                        {% if item.product.image %}
-                            <img src="{{ item.product.image.url }}" alt="Product image" class="w-100">
-                        {% else %}
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="Product image" class="w-100">
-                        {% endif %}
-                    </div>
-                    <div class="col-9">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                        <p class="my-0 small">Qty: {{ item.quantity }}</p>
-                    </div>
+                    {% if 'product' in item %}
+                        <div class="col-3 ml-3">
+                            {% if item.product.image %}
+                                <img src="{{ item.product.image.url }}" alt="Product image" class="w-100">
+                            {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="Product image" class="w-100">
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                            <p class="my-0 small">Qty: {{ item.quantity }}</p>
+                        </div>
+                    {% elif 'plan' in item %}
+                        <div class="col-3 ml-3">
+                            {% if item.plan.image %}
+                            <img src="{{ item.plan.image.url }}" alt="Plan image" class="w-100">
+                            {% else %}
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="Plan image" class="w-100">
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.plan.name }}</strong></p>
+                            <p class="my-0 small">Qty: {{ item.quantity }}</p>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
             <hr>
