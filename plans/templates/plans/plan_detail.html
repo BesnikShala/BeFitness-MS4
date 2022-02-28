@@ -111,13 +111,15 @@
                         </form>
                     </div>
                     {% if request.user.is_superuser %}
-
-                    <small class="ml-3">
-                        <a href="" class="text-success">Edit</a>
-                    </small>
-                    <small class="ml-3">
-                        <a href="{% url 'delete_plan' plan.id %}" class="text-danger">Delete</a>
-                    </small>
+                        <div class="mt-2">
+                            <small class="ml-3">
+                                <a href="{% url 'edit_plan' plan.id %}" class="text-dark btn btn-outline-primary">Edit</a>
+                            </small>
+                            <small class="ml-3">
+                                <a href="{% url 'delete_plan' plan.id %}" class="text-dark btn
+                                                                btn-outline-danger">Delete</a>
+                            </small>
+                        </div>
                     {% endif %}
                 </div>
             </div>
