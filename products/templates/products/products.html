@@ -19,29 +19,30 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-6">
-            <p class="text-muted mt-3 text-center text-md-left pl-5">
-                Displaying {{ products|length }} Products 
-                {% if search_term %}
-                {% endif %}
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2 d-none d-md-block d-sm-none side-buttons mt-5">
+        <div class="col text-center">
             <!-- current category buttons and links -->
             <h3 class="side-heading">Current Category</h3>
-            <ul class="list-style">
+            <ul class="list-inline">
                 {% for c in current_categories %}
-                <li class="list-style">
+                <li class="list-inline-item">
                     <a href="{% url 'products' %}?category={{ c.name }}" class="text-decoration-none side-badge">
                         <span class="p-2 mt-2 badge badge-dark rounded-0 border w-100">{{ c.friendly_name }}</span>
                     </a>
                 </li>
                 {% endfor %}
             </ul>
-
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 d-none d-md-block d-sm-none side-buttons mt-5">
             <!-- Accordian for sorting through products -->
+            <div>
+            <p class="text-muted mt-3 text-center text-md-left pl-5">
+                Displaying {{ products|length }} Products
+                {% if search_term %}
+                {% endif %}
+            </p>
+            </div>
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <h3 class="side-heading">Sort</h3>
                 <div class="accordion-item">
