@@ -145,19 +145,19 @@
                                     <td></td>
                                     <td>
                                         <div class="col-sm-12">
-                                            <div class="pt-5 text-center">
+                                            <div class="pt-5 text-center pl-0">
                                                 <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                                                 <h4 class="mt-4"><strong>Grand Total:
                                                         £{{ grand_total|floatformat:2 }}</strong>
                                                 </h4>
                                             </div>
-                                            <div class="col-12 text-center">
+                                            <div class="col-12 text-center pl-0">
                                                 <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 btn-lg">
                                                     <span class="text-uppercase">Checkout Securely</span>
                                                 </a>
                                             </div>
                                             <br>
-                                                <div class="col-12 text-center">
+                                                <div class="col-12 text-center pl-0">
                                                     <a class="btn btn-dark rounded-0 btn-lg"
                                                            href="{% url 'products' %}">
                                                         <span class="text-uppercase">Back to
@@ -166,6 +166,7 @@
                                                 </div>
                                         </div>
                                     </td>
+                                    <td></td>
                                 </tr>
                         </table>
                     </div>
