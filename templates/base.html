@@ -45,9 +45,10 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg d-none pt-lg-2 d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 logo text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link logo main-logo-link">
+                    <h2 class="logo logo-font text-black my-0" style=" font-family: monospace; border: solid;
+                        color: black;">
                         BeFitness
                     </h2>
                 </a>
@@ -75,18 +76,20 @@
                             <i class="fas fa-user"> Account</i>
                         </button>
                         <br>
-                        <a class="text-small my-0 btn-dark" href="{% url 'view_bag' %}">
-                            <div class="text-center account-cart p-2">
-                                <i class="fas fa-cart-arrow-down"> Cart</i>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
+                        <button type="button" class="btn btn-dark">
+                            <a class="text-small my-0" href="{% url 'view_bag' %}">
+                                <div class="text-center account-cart p-2">
+                                    <i class="text-white fas fa-cart-arrow-down"></i>
+                                    <p class="my-0 fw-bold text-white">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </button>
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}

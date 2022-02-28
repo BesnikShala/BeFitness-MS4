@@ -112,14 +112,6 @@ span.badge {
     font-size: 15px;
 }
 
-/* Toasts */
-
-/* .toast-header {
-    background-color: #f9d100;
-    z-index: 9999;
-
-} */
-
 /* Checkout Cart */
 
 .cart-buttons span {
@@ -154,6 +146,7 @@ span.badge {
 
 .main-logo-link {
     width: fit-content;
+
 }
 
 .update-link,
