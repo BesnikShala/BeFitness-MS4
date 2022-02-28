@@ -81,7 +81,8 @@
                                             <input type="hidden" name="item_type"
                                                 value="{% if 'product' in item %}product{% endif %}">
                                             <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-                                            <input type="submit" value="Update" class="btn update-form">
+                                            <input type="submit" value="Update"
+                                                class="btn update-form text-dark btn-outline-primary mb-1">
                                         </form>
                                         <form class="remove-item">
                                             <input type="hidden" value="{{ csrf_token }}" name="csrf_token">
@@ -89,7 +90,8 @@
                                                 value="{% if 'product' in item %}{{ item.product.id }}{% elif 'plan' in item %}{{ item.plan.id }}{% endif %}">
                                             <input type="hidden" name="item_type"
                                                 value="{% if 'product' in item %}product{% elif 'plan' in item %}plan{% endif %}">
-                                            <input type="submit" value="Remove" class="btn">
+                                            <input type="submit" value="Remove"
+                                                class="btn text-dark btn-outline-danger">
                                         </form>
                                     </td>
                                 </tr>
@@ -137,13 +139,14 @@
                                             <input type="hidden" name="item_id" value="{% if 'plan' in item %}{{ item.plan.id }}{% endif %}">
                                             <input type="hidden" name="item_type" value="{% if 'plan' in item %}plan{% endif %}">
                                             <input type="hidden" name="csrf_token"  value="{{ csrf_token }}">
-                                            <input type="submit" value="Update" class="btn update-form">
+                                            <input type="submit" value="Update"
+                                                class="btn update-form text-dark btn-outline-primary mb-1">
                                        </form>
                                        <form class="remove-item">
                                            <input type="hidden" value="{{ csrf_token }}" name="csrf_token">
                                            <input type="hidden" name="item_id" value="{% if 'product' in item %}{{ item.product.id }}{% elif 'plan' in item %}{{ item.plan.id }}{% endif %}">
                                            <input type="hidden" name="item_type" value="{% if 'product' in item %}product{% elif 'plan' in item %}plan{% endif %}">
-                                           <input type="submit" value="Remove" class="btn">
+                                           <input type="submit" value="Remove" class="btn text-dark btn-outline-danger">
                                        </form>
                                    </td>
                                </tr>
@@ -206,8 +209,6 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-form').click(function(e) {
-        // var form = $(this).prev('.update-form');
-        // form.submit();
          event.preventDefault()
          const form = event.target.parentElement;
          const url = `/bag/adjust/${form.item_id.value}/`;
