@@ -36,14 +36,6 @@
                                     <td class="py-3">
                                         <p class="my-0"><strong>Product-Name: {{ item.product.name }}</strong></p>
                                         <p class="my-3"><strong>Price: £{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
-                                        <p class="my-3">
-                                            <strong>Size:</strong>
-                                            {% if item.product.has_sizes %}
-                                                {{ item.product.size|upper }}
-                                            {% else %}
-                                                N/A
-                                            {% endif %}
-                                        </p>
                                         <form method="POST" class="form update-form" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -71,9 +63,6 @@
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    {% if item.product.has_sizes %}
-                                                    <input type="hidden" name="size" value="{{ item.size }}">
-                                                    {% endif %}
                                                 </div>
                                             </div>
                                             <input type="hidden" name="item_id"
@@ -158,16 +147,9 @@
                                         <div class="col-sm-12">
                                             <div class="pt-5 text-center">
                                                 <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                                 <h4 class="mt-4"><strong>Grand Total:
                                                         £{{ grand_total|floatformat:2 }}</strong>
                                                 </h4>
-                                                {% if free_delivery_delta > 0 %}
-                                                <p class="mb-1 text-danger">
-                                                    If you spend<strong>£{{ free_delivery_delta }}</strong> more!
-                                                    You will get free delivery.
-                                                </p>
-                                                {% endif %}
                                             </div>
                                             <div class="col-12 text-center">
                                                 <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0 btn-lg">
