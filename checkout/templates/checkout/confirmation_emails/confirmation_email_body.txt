@@ -6,7 +6,6 @@ Order Date : {{ order.date }}.
 Order Number: {{ order.order_number }}.
 
 Order Total: £{{ order.order_total }}
-Delivery Cost: £{{ order.delivery_cost }}.
 Grand Total: £{{ order.grand_total }}.
 
 Delivery details:
