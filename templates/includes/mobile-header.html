@@ -48,7 +48,7 @@
     <li class="list-inline-item d-block d-lg-none">
         <div class="text-center">
             <i class="fas fa-cart-arrow-down"> Cart</i>
-            <a class="text-small my-0 text-dark" href="{% url 'view_bag' %}">
+            <a class="text-small my-0 text-dark font-weight-bold" href="{% url 'view_bag' %}">
                 {% if grand_total %}
                     £{{ grand_total|floatformat:2 }}
                 {% else %}
