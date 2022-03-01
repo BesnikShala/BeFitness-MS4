@@ -173,8 +173,6 @@ Users are able to search products by key words from the navbar. A responsive sea
 
 Outcome: This passed as users are able to search for all product keywords. This feature is not available for plans on the same input field due to only one url action being available.
 
-![Search](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/searchproductglove.jpeg)
-
 ![Search Glove](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/searchproduct.jpeg)
 
 * Checkout / Purchase
@@ -256,6 +254,50 @@ Outcome: This passed as toasts pop up when a view is triggered.
 ![JS](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/BCE457B2-6130-4F2E-8456-BC2D936F18D4.jpeg)
 
 Passed All Validation
+
+## Further Testing
+
+* Testing was performed on the following browsers and devices:
+
+- Google Chrome
+
+- Safari
+
+- Samsung Galaxy S20 +
+
+- Iphone 13 Pro Max
+
+There were no major issues in testing. I used lighthouse testing to test every page and got good scores for all pages. The only thing bringing down a perfect score would be the sizing of the images which increased the load time for some pages. 
+
+* Home Page
+
+![Desktop Homepage](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/0A504230-D4E5-4774-9DBB-5DF2E012441B.jpeg)
+- [Mobile Homepage Results](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/D3D15E50-3D28-4B32-8624-E134710DA07F.jpeg)
+
+
+* Poducts Page
+
+- [Desktop Products Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/4C348AD7-414C-48C6-84F8-B2DCA8099B20.jpeg) | [Mobile Products Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/200BC526-8EF9-416F-8A0D-8E4DC2A11BDD.jpeg)
+
+* Plans Page
+
+- [Desktop Plans Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/78D9AA9C-3F05-4428-A2C2-DC0F7C7DE989.jpeg) | [Mobile Plans Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/949C8E9C-4C40-4FEB-8016-0CC4B09ACE9D.jpeg)
+
+* Checkout Cart
+
+- [Desktop Checkout Cart Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/E6995ED4-E25E-4CE7-BD0E-B2415C4F8619.jpeg) | [Mobile Checkout Cart Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/E14DEC6B-1770-4823-A9EE-B432765D195B.jpeg)
+
+* Checkout Page
+
+- [Desktop Checkout Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/E6995ED4-E25E-4CE7-BD0E-B2415C4F8619.jpeg) | [Mobile Checkout Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/469F209B-6234-46FC-BD49-8CBF6E562EFE.jpeg)
+
+* Profile Page
+
+- [Desktop Profile Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/0AEB939F-2019-445E-A8CE-0EAF5D6A99A3.jpeg) | [Mobile Profile Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/2F3B2A52-A5A8-4FC1-9136-CD6DB2EB69AF.jpeg)
+
+* Sign In Page
+
+- [Desktop Sign In Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/0719F8F3-354C-422D-9A47-FC0DD756F471.jpeg) | [Mobile Sign In Page](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/33CC86EF-4D3E-4663-B8C9-4FE5B60817C5.jpeg)
 
 
 

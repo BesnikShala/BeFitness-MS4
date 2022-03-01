@@ -7,6 +7,7 @@ from .forms import PlanForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+
 def view_plans(request):
     """ Show all Plans and sort/search queries """
 
@@ -34,7 +35,7 @@ def view_plans(request):
             plan_categories = request.GET['plan_category'].split(',')
             plans = plans.filter(plan_category__name__in=plan_categories)
             plan_categories = Plan_Category.objects.filter(name__in=plan_categories)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
