@@ -76,9 +76,9 @@
                             <i class="fas fa-user"> Account</i>
                         </button>
                         <br>
-                        <button type="button" class="btn btn-dark">
-                            <a class="text-small my-0" href="{% url 'view_bag' %}">
-                                <div class="text-center account-cart p-2">
+                        <div type="button" class="btn btn-dark">
+                            <div class="text-center account-cart p-2">
+                                <a class="text-small my-0" href="{% url 'view_bag' %}">
                                     <i class="text-white fas fa-cart-arrow-down"></i>
                                     <p class="my-0 fw-bold text-white">
                                         {% if grand_total %}
@@ -87,9 +87,9 @@
                                         £0.00
                                         {% endif %}
                                     </p>
-                                </div>
-                            </a>
-                        </button>
+                                </a>
+                            </div>
+                        </div>
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
