@@ -5,7 +5,7 @@
 
 View the live site here - [BeFitness](https://befitness-ms4.herokuapp.com/)
 
-BeFitness is a E-commerce site where users are able to purchase fitness products, nutrition plans and exercise plans. Users can browse the site for their needs to achieve their fitness goals. They can set up an account in order to complete purchases, rate products, and even post their fitness gains and achievments. The site allows the owner to create online sales via products or fitness plans, adding a social aspect to the site can generate more online traffic and attention to the site hopefully generating more sales and giving users a reason to come back. 
+BeFitness is a E-commerce site where users are able to purchase fitness clothing, products and nutrition. They also have the option to browse and purchase exercise plans which suit their need. Users can browse the site for their needs to achieve their fitness goals. They can set up an account in order to complete purchases, save deleivery information and view previous orders. The site offers a broad range of products whcih is easy to navigate and browse via search bar and sorting buttons. The site allows the owner to create online sales via products or fitness plans, adding a social aspect to the site can generate more online traffic and attention to the site hopefully generating more sales and giving users a reason to come back. 
 
 
 # User Experience
@@ -165,6 +165,10 @@ There was a clash with two apps (products and plans) merging together to work wi
 
 Users will be able to write a review and view reviews of products/plans. 
 
+* Product Sizing
+
+Due to implementation of Plans App the logic needed to be altered and including sizing would not work so left this as a feature to implement at a later date.
+
 
 ## Technologies Used
 
@@ -218,7 +222,6 @@ Heroku was used as a cloud-based platform to deploy this site.
 
 The font styles used on this website were chosen from Google fonts.
 
-
 * Fontawesome
 
 The icons used on this page were found in Fontawesome.
@@ -250,7 +253,6 @@ The wireframes for this project were created using Balsamiq.
 * Am I Responsive
 
 This was used to test the responsiveness of the site and also to create the mock-up image presented at the start of this document.
-
 
 * Coolors.co
 
