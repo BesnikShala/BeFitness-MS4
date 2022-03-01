@@ -162,7 +162,7 @@ Users can sort products to display and sort by price, category, rating or name. 
 
 Outcome: Testing Passed and all products and plans sorting is fully functional.
 
-![]()
+![Sort Products](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/FFFF6E43-962A-49E2-9418-94C8F536097C.jpeg)
 
 * Search Products
 
@@ -196,7 +196,8 @@ Users are able to create a profile. They are able to save order information and 
 
 Outcome: This passed. Users are able to successfully create a profile and save their information. 
 
-![]()
+![Sign Up](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/42334AD3-D8F0-4048-92F8-DADFDB68BE6D.jpeg)
+![Edit Profile Info](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/C0D78936-2EB7-4DE7-8A2D-8D98B789EACF.jpeg)
 
 * Add / Edit / Delete Products
 
@@ -223,6 +224,8 @@ Users can view and purchase different plans to suit their fitness needs. The use
 The user and admin will be notfied when using features around the site. If the checkout or bag is used a message will pop up via a toast from bootstrap. This notifies the user of any actions carried out. It will also notfify of any errors.
 
 Outcome: This passed as toasts pop up when a view is triggered. 
+
+![Toast](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/addplantoast.jpeg)
 
 
 ## Validators
