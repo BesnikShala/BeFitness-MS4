@@ -180,7 +180,7 @@ Users are able to complete a payment via stripe. They will need to create an acc
 
 Outcome: This passed as payments with stripe were successful. 
 
-![]()
+![Checkout](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/20480456-D6B1-4C63-8D4F-1B73244636B2.jpeg)
 
 * Real Email Confirmation
 
