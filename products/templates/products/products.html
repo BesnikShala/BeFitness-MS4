@@ -154,22 +154,22 @@
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                            <p class="mb-0 ml-3">{{ product.name }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold ml-3">£{{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a href="{% url 'products' %}?category={{ product.category.name }}"
-                                            class="text-muted">
+                                            class="text-muted ml-3">
                                             <i class="fas fa-tags mr-1"></i>{{ product.category.friendly_name }}
                                         </a>
                                     </p>
                                     {% endif %}
                                     {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1">{{ product.rating }} /
+                                    <small class="text-muted ml-3"><i class="fas fa-star mr-1">{{ product.rating }} /
                                             5</i></small>
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
@@ -178,12 +178,12 @@
                                     <div class="">
                                         <small class="ml-3">
                                             <a href="{% url 'edit_product' product.id %}"
-                                                class="text-dark btn btn-outline-primary">Edit</a>
+                                                class="text-dark btn btn-outline-primary mb-2">Edit</a>
                                         </small>
-                                        <small class="ml-3 fw-bold ">
+                                        <small class="ml-3">
                                             <a href="{% url 'delete_product' product.id %} "
                                                 class="text-dark btn
-                                                btn-outline-danger">Delete</a>
+                                                btn-outline-danger mb-2">Delete</a>
                                         </small>
                                     </div>
                                     {% endif %}
