@@ -192,7 +192,7 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-form').click(function(e) {
-         event.preventDefault()
+         event.preventDefault();
          const form = event.target.parentElement;
          const url = `/bag/adjust/${form.item_id.value}/`;
          const data = {
@@ -205,11 +205,11 @@
          $.post(url, data).done(function() {
          location.reload();
          });
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-item').submit(function(event) {
-        event.preventDefault()
+        event.preventDefault();
         const form = event.target;
         const url = `/bag/remove/${form.item_id.value}/`;
         const data = {
