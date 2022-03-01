@@ -38,7 +38,7 @@ Outcome: Users need to sign up so they can purchase products/plans. They are the
 
 Outcome: There are 6 different categories for two different services of products and plans. There were many additions I would have liked to add but due to time constraints from continuous issues this was not possible.
 
-![]()
+![range](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/21EA0974-B163-44A2-9FB4-47DE88D8A12E.jpeg)
 
 * Sort through different products.
 
@@ -52,19 +52,22 @@ Outcome: Sorting through products and plans is available and functions well. Thi
 
 Outcome: With Django-Allauth users can safely log in as there is a salt hash algorithm which secures users details.
 
-![]()
+![signin](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/181D812F-6C01-4AB2-806B-701E22CCAB10_4_5005_c.jpeg)
 
 * Securely be able to checkout and pay for products.
 
 Outcome: Stripe payment system is one of the most secure on the market. Therefore the user can safely checkout as all sensitive data is encrypted.
 
-![]()
+![checkout](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/20480456-D6B1-4C63-8D4F-1B73244636B2.jpeg)
 
 * View my order history.
 
 Outcome: Testing for this passed, users are able to check their previous orders on their profile page.
 
-![]()
+![history](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/25395CB3-CCF9-40CD-8F2B-F7B5BCE41DBC.jpeg)
+
+![history](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/85FF7392-8691-4BC6-9FC8-2016542BE2EC_4_5005_c.jpeg))
+
 
 * Edit my profile delivery information.
 
@@ -121,7 +124,7 @@ Users are able to view products within categories. They have the option to expan
 
 Outcome: All testing for this feature passed as users are able to view all product information and images.
 
-![]()
+![products](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/5B7ED4CA-32E3-4DAF-A4A4-87607667EC3F.jpeg)
 
 * View Fitness Plans
 
@@ -129,7 +132,7 @@ Users are able to view the plans within categories just as products. They can al
 
 Outcome: This passed testing and users are able to view plans in the main page and in the plans detail page.
 
-![]()
+![plans](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/15E29158-7F71-48F0-9E7A-088BEF968056.jpeg)
 
 * Select Quantity
 
@@ -137,7 +140,7 @@ Users can specify the quantity of the products/plans they want to purchase.
 
 Outcome: Testing passed as users are able to select the quantity they want to add to the bag.
 
-![]()
+![update](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/4FF3D9A4-E66A-4E00-80A8-CE6A911134B0.jpeg)
 
 * Update Quantity in the Bag
 
@@ -145,7 +148,7 @@ Users can alter the quantity in the bag as they please.
 
 Outcome: Testing passed as users are able to update the quantity of plans and products.
 
-![]()
+![update](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/4FF3D9A4-E66A-4E00-80A8-CE6A911134B0.jpeg)
 
 * Remove Products/Plans in the Bag
 
@@ -153,7 +156,7 @@ Users can remove products/plans as they please.
 
 Outcome: Testing passed users are able to remove any product or plan from the bag.
 
-![]()
+![remove](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/8C45CFFD-0B20-4ED0-8B9B-E3EF68DD33F6.jpeg)
  
 
 * Sorting Products/Plans
@@ -230,17 +233,32 @@ Outcome: This passed as toasts pop up when a view is triggered.
 
 ## Validators
 
-### HTML
+* Homepage
+![Home](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/7B1A983A-8EEF-456B-9FE1-7C60D41221EB.jpeg)
+* Products Page
+![Products](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/98980EB6-898E-431D-A5AB-F859E4577AAB.jpeg)
+* Plans Page
+![Plans](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/FB80F3E2-B877-4441-8551-DD62EE6C91B0.jpeg)
+* Sign Up
+![Sign up](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/A5118C60-AB76-468A-ADEC-4A8E67F1540C.jpeg)
+* Log in
+![Login](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/1F79272B-1375-40B6-8CC9-639AE60B3EC2.jpeg)
+* Bag
+![Bag](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/12F6F154-3CD7-4EC5-B9FD-581CD934B1D2.jpeg)
+* Checkout
+![Checkout](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/D79F66E0-E74A-418A-82EA-03C53A1DE88D.jpeg)
 
-* Passed all Html Validators
+* CSS
+![CSS](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/3949B300-05FA-4CF4-92B5-A3F38C3D2840.jpeg)
 
-### CSS
+* JSHint
 
-* Passed CSS Validator
+![JS](https://raw.githubusercontent.com/BesnikShala/BeFitness-MS4/main/testing/media/BCE457B2-6130-4F2E-8456-BC2D936F18D4.jpeg)
 
-### JS
+Passed All Validation
 
-* Passed all Js Validator
+
+
 
 
 
