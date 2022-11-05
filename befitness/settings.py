@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = os.environ.get('DEBUG')
 
 
-ALLOWED_HOSTS = ['befitness-ms4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['befitness-ms4.herokuapp.com', 'localhost', 'befitness-ms4-production.up.railway.app']
 
 
 # Application definition
