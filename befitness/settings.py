@@ -151,7 +151,7 @@ else:
         }
     }
 
-CLOUDINARY_URL = 'cloudinary://411795851434848:eBI_oqkCIQGQKN_ynonfRy-1rnE@hecp0lykc'
+CLOUDINARY_URL = 'cloudinary://378936361148368:mySy3tc52MND1NNQEeX0AYlc3Dk@dieghsy9o'
 
 
 # Password validation
@@ -196,20 +196,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
-  'CLOUD_NAME': 'hecp0lykc',
-  'API_KEY': '411795851434848',
-  'API_SECRET': 'eBI_oqkCIQGQKN_ynonfRy-1rnE'
+  'CLOUD_NAME': 'dieghsy9o',
+  'API_KEY': '378936361148368',
+  'API_SECRET': 'mySy3tc52MND1NNQEeX0AYlc3Dk'
 }
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-cloudinary.config( 
-  cloud_name = "hecp0lykc", 
-  api_key = "411795851434848", 
-  api_secret = "eBI_oqkCIQGQKN_ynonfRy-1rnE" 
-)
 
 
 # stripe
