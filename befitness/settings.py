@@ -151,6 +151,8 @@ else:
         }
     }
 
+CLOUDINARY_URL = 'cloudinary://411795851434848:eBI_oqkCIQGQKN_ynonfRy-1rnE@hecp0lykc'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
