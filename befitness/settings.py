@@ -49,7 +49,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -62,9 +64,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
     'profiles',
-
-    'cloudinary',
-    'cloudinary_storage'
 
 
 
@@ -151,7 +150,7 @@ else:
         }
     }
 
-CLOUDINARY_URL = 'cloudinary://378936361148368:mySy3tc52MND1NNQEeX0AYlc3Dk@dieghsy9o'
+
 
 
 # Password validation
@@ -192,16 +191,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-
-CLOUDINARY_STORAGE = {
-  'CLOUD_NAME': 'dieghsy9o',
-  'API_KEY': '378936361148368',
-  'API_SECRET': 'mySy3tc52MND1NNQEeX0AYlc3Dk'
-}
 
 MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dieghsy9o',
+    'API_KEY': '378936361148368',
+    'API_SECRET': 'mySy3tc52MND1NNQEeX0AYlc3Dk'
+}
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
