@@ -204,11 +204,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dieghsy9o',
-    'API_KEY': '378936361148368',
-    'API_SECRET': 'mySy3tc52MND1NNQEeX0AYlc3Dk'
-}
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
