@@ -202,9 +202,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATICFILES_DIRS = [
-    (os.path.join(BASE_DIR, 'static'))
-]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
