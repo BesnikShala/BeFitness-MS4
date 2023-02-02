@@ -167,6 +167,13 @@ ul {
     margin: 0%;
 }
 
+#plan-desc {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
 /* Media Queries */
 
 /* fixed top navbar only on medium to large screens */
