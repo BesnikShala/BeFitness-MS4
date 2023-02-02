@@ -46,6 +46,7 @@ ALLOWED_HOSTS = ['befitness-ms4.herokuapp.com', 'localhost', 'befitness-ms4-prod
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
