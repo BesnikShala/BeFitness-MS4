@@ -1,0 +1,185 @@
+html {
+    height: 100%
+}
+
+body {
+    padding-top: 150px;
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
+}
+     
+/* Navigation/navbar */
+
+#topnav {
+    color: #f9d100;
+    background-color: #f9d100;
+    min-height: 100px;
+}
+
+#main-nav {
+    background-color: #f9d100;
+}
+
+.mobile-nav {
+    background-color: #f9d100;
+
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.header-image-text {
+    padding-top: 150px;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: white;
+}
+
+.shop-button {
+    background-color: #ffd026
+}
+
+.account-cart {
+    padding: 4px;
+    padding-left: 10px;
+    color: black;
+}
+
+/* category buttons */
+
+.list-style {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.accordion-style {
+    font-size: 20px;
+}
+
+.side-buttons {
+    background: #f1f1f1;
+}
+
+.account-cart {
+    justify-content: end;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0%;
+    position: fixed;
+    background-color: white;
+    z-index: -1;
+}
+
+a.side-badge > span.badge:hover {
+    background: #f9d100;
+    color: black;
+}
+
+h2.side-badge > button:hover {
+    background: #f9d100;
+    color: black;
+}
+
+.side-heading {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.sort-text {
+    color: black;
+    font-weight: 300;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+button.badge {
+    font-size: 15px;
+}
+
+a.side-badge {
+    font-size: 15px
+}
+
+span.badge {
+    font-size: 15px;
+}
+
+/* Checkout Cart */
+
+.cart-buttons span {
+    min-width: 20px;
+}
+
+.bag-notification {
+    height: 120px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.my-toast {
+    overflow: visible;
+}
+
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 9999999999999;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* Plan Detail */
+.detail-list {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Media Queries */
+
+/* fixed top navbar only on medium to large screens */
+@media(min-width: 992px) {
+    .fixed-top-desktop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1050;
+    }
+
+    .header-container {
+        padding-top: 80px;
+    }
+}
