@@ -199,6 +199,9 @@ The following Python modules were used on this project:
 * s3transfer==0.5.0
 * sqlparse==0.4.2
 * stripe==2.65.0
+* cloudinary==1.31.0
+* whitenoise==6.3.0
+
 
 * Django was used as the main python framework in the building of this project.
 
@@ -261,6 +264,14 @@ Coolors.co was used to create the project's color palette.
 * StackOverflow
 
 Stack Overflow was used as a general reference resource.
+
+* Cloudinary - Feb 2023
+
+This was used to host media files due to AWS S3 free tier expiring. 
+
+* Whitenoise - Feb 2023
+
+This was used to host staticfiles such as css and js. Static files were not loading for me with Cloudinary and Whitenoise was able to bridge that gap.
 
 ## Testing
 
@@ -492,6 +503,24 @@ This project was deployed using Heroku and stored in GitHub.
 * Type the name of the repository into the search bar presented.
 * Click the Code dropdown button next to the green Gitpod button.
 * When the correct repository displays click the connect button.
+
+- Connecting to Cloudinary - Feb 2023
+
+* Head over to Cloudinary website and create an account.
+* On the dashboard you have all the settings needed to connect you project.
+* Copy the Cloudinary_URL and added it to the env.py file.
+* Pip install cloudinary, freeze requirements.txt.
+* Add cloudinary_storage to installed apps above django.contrib.staticfiles.
+* Set the Defaul file storage to point to Cloudinary.
+
+- Connecting to Whitenoise - Feb 2023
+
+* pip install white noise, freeze reuquirements.txt.
+* Add whitenoise.runserver_nostatic to installed apps (To run static in production).
+* Add whitenoise.middleware.WhiteNoiseMiddleware to Middleware.
+* Set staticfiles_storage to point to Whitenoise.
+* Run collectstatic. 
+
 
 #### Making a clone to run locally
 
